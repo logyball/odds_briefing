@@ -37,6 +37,7 @@ func h2hToAmericanOdds(h2hOdds string) int {
 	return int(-100 / (floatOdds - 1))
 }
 
+// TODO - rewrite as http client rather than endpoint
 func makeApiRequest(endpoint string) []byte {
 	finalUrl := baseApiUrl + endpoint
 

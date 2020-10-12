@@ -27,14 +27,14 @@ func GetNflTotalsOdds() []string {
 	return retArr
 }
 
-func GetNflH2hOdds() { // []string {
+func GetNflH2hOdds() { // TODO - IMPLEMENT []string {
 	oddsApiKey := getOddsApiKey()
 	formattedEndpoint := fmt.Sprintf("/v3/odds/?apiKey=%s&sport=americanfootball_nfl&region=%s&mkt=h2h&oddsFormat=american", oddsApiKey, region)
 	respBodyByteArr := makeApiRequest(formattedEndpoint)
 	fmt.Printf("%T", respBodyByteArr)
 }
 
-func GetNflSpreadsOdds() { // []string {
+func GetNflSpreadsOdds() { // TODO - IMPLEMENT []string {
 	oddsApiKey := getOddsApiKey()
 	formattedEndpoint := fmt.Sprintf("/v3/odds/?apiKey=%s&sport=americanfootball_nfl&region=%s&mkt=spreads&oddsFormat=american", oddsApiKey, region)
 	respBodyByteArr := makeApiRequest(formattedEndpoint)
