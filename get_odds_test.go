@@ -1,10 +1,30 @@
-package odds_briefing
+package main
 
 import (
+	"io/ioutil"
+	"log"
+	"os"
+	"path/filepath"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
+
+func getJsonFilepath(filename string) string {
+	curDir, err := os.Getwd()
+	if err != nil {
+		log.Fatal(err)
+	}
+	return filepath.Join(curDir, "example_responses", filename)
+}
+
+/*
+	Helper functions
+*/
+func TestGetOddsApiKey(t *testing.T) {
+	apiKey := getOddsApiKey()
+	assert.NotEmpty(t, apiKey, "odds api key not found")
+}
 
 func TestH2hToAmericanOdds(t *testing.T) {
 	assert.Equal(t, h2hToAmericanOdds("1.20"), -500)
@@ -21,12 +41,108 @@ func TestMakeApiRequestCanReachBaseUrl(t *testing.T) {
 	assert.NotNil(t, body, "body of response was nil")
 }
 
+/*
+	Active Sports API call
+*/
 func TestGetActiveSports(t *testing.T) {
-	body := getActiveSports()
+	body := GetActiveSports()
 	assert.NotNil(t, body, "body of response from get active sports was nil")
 }
 
 func TestGetActiveSportsHasAtLeastOneSportWeCareAbout(t *testing.T) {
-	body := getActiveSports()
+	body := GetActiveSports()
 	assert.NotNil(t, body, "body of response from get active sports was nil")
+}
+
+func TestProcessActiveSportsResponse(t *testing.T) {
+	activeSportsJsonFilepath := getJsonFilepath("active_sports.json")
+	activeSportsByteArr, err := ioutil.ReadFile(activeSportsJsonFilepath)
+	if err != nil {
+		log.Fatal(err)
+	}
+	activeSportsResp := processActiveSportsResponse(activeSportsByteArr)
+	assert.NotNil(t, activeSportsResp, "active sports resp is nil")
+	assert.IsType(t, ActiveSportsResponse{}, activeSportsResp, "active sports resp is wrong type")
+	assert.NotEmpty(t, activeSportsResp.Data)
+	assert.True(t, activeSportsResp.Success)
+}
+
+func TestGetListOfSportsFromActiveResp(t *testing.T) {
+	activeSportsJsonFilepath := getJsonFilepath("active_sports.json")
+	activeSportsByteArr, err := ioutil.ReadFile(activeSportsJsonFilepath)
+	if err != nil {
+		log.Fatal(err)
+	}
+	activeSportsResp := processActiveSportsResponse(activeSportsByteArr)
+	listOfSports := getListOfSportsFromActiveResp(&activeSportsResp)
+	assert.NotEmpty(t, listOfSports, "sports list is empty")
+	assert.Greater(t, len(listOfSports), 0, "sports list is too short")
+	for _, sport := range listOfSports {
+		assert.NotEmpty(t, sport, "empty sport")
+	}
+}
+
+/*
+	NFL Totals API Call
+*/
+
+func TestProcessNFLTotalsResponse(t *testing.T) {
+	nflTotalsJsonFilepath := getJsonFilepath("totals_nfl.json")
+	nflTotalsByteArr, err := ioutil.ReadFile(nflTotalsJsonFilepath)
+	if err != nil {
+		log.Fatal(err)
+	}
+	nflTotalsResp := processNflTotalsResponse(nflTotalsByteArr)
+	assert.NotNil(t, nflTotalsResp, "nfl totals  resp is nil")
+	assert.IsType(t, TotalsOddsResponse{}, nflTotalsResp, "active sports resp is wrong type")
+	assert.NotEmpty(t, nflTotalsResp.Games)
+	assert.True(t, nflTotalsResp.Success)
+	for _, entry := range nflTotalsResp.Games {
+		for _, sites := range entry.Sites {
+			assert.Greater(t, len(sites.Odds.Totals.Points), 1)
+			assert.Greater(t, len(sites.Odds.Totals.Odds), 1)
+			assert.Greater(t, len(sites.Odds.Totals.Position), 1)
+			assert.Equal(t, len(sites.Odds.Totals.Points), len(sites.Odds.Totals.Odds), len(sites.Odds.Totals.Position))
+			for _, pts := range sites.Odds.Totals.Points {
+				assert.NotEmpty(t, pts, "points was empty")
+			}
+			for _, ptsStr := range sites.Odds.Totals.PointsStr {
+				assert.NotEmpty(t, ptsStr, "points string was empty")
+			}
+			for _, ptsFl := range sites.Odds.Totals.PointsFloat {
+				assert.NotEmpty(t, ptsFl, "points float was empty")
+			}
+			for _, odds := range sites.Odds.Totals.Odds {
+				assert.NotEmpty(t, odds, "odds was empty")
+			}
+			for _, pos := range sites.Odds.Totals.Position {
+				assert.NotEmpty(t, pos, "pos was empty")
+			}
+		}
+	}
+}
+
+func TestFormattingProcessedNflTotalsResp(t *testing.T) {
+	nflTotalsJsonFilepath := getJsonFilepath("totals_nfl.json")
+	nflTotalsByteArr, err := ioutil.ReadFile(nflTotalsJsonFilepath)
+	if err != nil {
+		log.Fatal(err)
+	}
+	nflTotalsResp := processNflTotalsResponse(nflTotalsByteArr)
+	totalOdds := formatNflTotalsResp(nflTotalsResp)
+	assert.NotEmpty(t, totalOdds.OddsType)
+	assert.NotEmpty(t, totalOdds.Sport)
+	assert.NotEmpty(t, totalOdds.Odds)
+	for _, odd := range totalOdds.Odds {
+		assert.NotEmpty(t, odd.Teams)
+		assert.NotEmpty(t, odd.Over)
+		assert.NotEmpty(t, odd.Under)
+		assert.NotEmpty(t, odd.OverOdds)
+		assert.NotEmpty(t, odd.UnderOdds)
+	}
+}
+
+func TestGetNflTotalsOdds(t *testing.T) {
+	totalOdds := GetNflTotalsOdds()
+	assert.NotEmpty(t, totalOdds)
 }

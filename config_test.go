@@ -1,4 +1,4 @@
-package odds_briefing
+package main
 
 import (
 	"os"
