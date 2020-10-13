@@ -6,6 +6,7 @@
 package main
 
 import (
+	"os"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -41,7 +42,14 @@ func TestSendTwilioMsgFromData(t *testing.T) {
 }
 
 func TestSendingFirstTotalsOddsAsMessage(t *testing.T) {
-	// WTF
 	err := SendFirstTotalsOddsAsMessage()
 	assert.Nil(t, err, "error when sending message")
+}
+
+func TestSendingFirstFiveTotalsOddsAsMessage(t *testing.T) {
+	if os.Getenv("TEST_HARMFUL_STUFF") == "true" {
+		err := SendFirstXTotalsOddsAsMessage(5)
+		assert.Nil(t, err, "error when sending message")
+	}
+	t.Skip()
 }

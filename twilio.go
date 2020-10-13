@@ -70,3 +70,22 @@ func SendFirstTotalsOddsAsMessage() error {
 	err := sendTwilioMsgFromGeneratedOddsData(msgToSend)
 	return err
 }
+
+// PRETTY MUCH NEVER DO THIS
+func SendFirstXTotalsOddsAsMessage(x int) error {
+	var err error
+
+	nflTotalsForThisWeek := GetNflTotalsOdds()
+
+	for i, msgToSend := range nflTotalsForThisWeek {
+		if i >= (x - 1) {
+			break
+		}
+		err = sendTwilioMsgFromGeneratedOddsData(msgToSend)
+		if err != nil {
+			ErrorHelper(err)
+		}
+	}
+
+	return err
+}
