@@ -8,6 +8,8 @@ import (
 	"math"
 	"net/http"
 	"strconv"
+	"strings"
+	"time"
 )
 
 const baseApiUrl string = "https://api.the-odds-api.com"
@@ -141,10 +143,26 @@ func formatNflTotalsResp(totalsResp TotalsOddsResponse) FormattedTotalsOdds {
 	totalOdds.Sport = "NFL"
 	for _, game := range totalsResp.Games {
 		var gameTotals TotalOdds
+		gameTime := time.Unix(game.Gametime, 0)
+		gameTotals.Gametime = gameTime.Local()
 		gameTotals.Teams = makeTwoTeamNamesIntoOne(game.Teams)
 		gameTotals.Over, gameTotals.Under = makeAdjustedOverUnder(game.Sites)
 		gameTotals.OverOdds, gameTotals.UnderOdds = makeAdjustedOverUnderOdds()
 		totalOdds.Odds = append(totalOdds.Odds, gameTotals)
 	}
 	return totalOdds
+}
+
+func formatNflTotalsMessageString(odds TotalOdds) string {
+	var msg strings.Builder
+	tm := time.Now()
+	zone, _ := tm.Zone()
+
+	msg.WriteString(fmt.Sprintf("%s\n", odds.Teams))
+	msg.WriteString(fmt.Sprintf("%02d/%02d at %2d:%02d %s\n", odds.Gametime.Month(), odds.Gametime.Day(), odds.Gametime.Hour(), odds.Gametime.Minute(), zone))
+	msg.WriteString(fmt.Sprintf("Adjusted Over Under: %0.1f\n", odds.Over))
+	msg.WriteString(fmt.Sprintf("Over odds: %d\nUnder odds: %d\n", odds.OverOdds, odds.UnderOdds))
+	msg.WriteString("Best of Luck!")
+
+	return msg.String()
 }

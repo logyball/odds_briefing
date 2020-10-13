@@ -13,9 +13,11 @@ import (
 const credsFileName string = "credentials.yml"
 
 type credentials struct {
-	OddsApiKey    string `yaml:"odds_api_key"`
-	TwilioSid     string `yaml:"twilio_sid"`
-	TwilioAuthKey string `yaml:"twilio_auth_key"`
+	OddsApiKey       string `yaml:"odds_api_key"`
+	TwilioSid        string `yaml:"twilio_sid"`
+	TwilioAuthKey    string `yaml:"twilio_auth_key"`
+	TwilioNumberFrom string `yaml:"twilio_number_from"`
+	TwilioNumberTo   string `yaml:"twilio_number_to"`
 }
 
 func getCredsFilePath() string {

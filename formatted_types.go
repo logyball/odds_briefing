@@ -1,5 +1,7 @@
 package main
 
+import "time"
+
 type FormattedTotalsOdds struct {
 	Sport    string
 	OddsType string
@@ -8,6 +10,7 @@ type FormattedTotalsOdds struct {
 
 type TotalOdds struct {
 	Teams     string
+	Gametime  time.Time
 	Over      float64
 	Under     float64
 	OverOdds  int

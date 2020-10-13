@@ -36,23 +36,9 @@ func TestH2hToAmericanOdds(t *testing.T) {
 
 }
 
-func TestMakeApiRequestCanReachBaseUrl(t *testing.T) {
-	body := makeApiRequest("")
-	assert.NotNil(t, body, "body of response was nil")
-}
-
 /*
 	Active Sports API call
 */
-func TestGetActiveSports(t *testing.T) {
-	body := GetActiveSports()
-	assert.NotNil(t, body, "body of response from get active sports was nil")
-}
-
-func TestGetActiveSportsHasAtLeastOneSportWeCareAbout(t *testing.T) {
-	body := GetActiveSports()
-	assert.NotNil(t, body, "body of response from get active sports was nil")
-}
 
 func TestProcessActiveSportsResponse(t *testing.T) {
 	activeSportsJsonFilepath := getJsonFilepath("active_sports.json")
@@ -135,14 +121,10 @@ func TestFormattingProcessedNflTotalsResp(t *testing.T) {
 	assert.NotEmpty(t, totalOdds.Odds)
 	for _, odd := range totalOdds.Odds {
 		assert.NotEmpty(t, odd.Teams)
+		assert.NotEmpty(t, odd.Gametime)
 		assert.NotEmpty(t, odd.Over)
 		assert.NotEmpty(t, odd.Under)
 		assert.NotEmpty(t, odd.OverOdds)
 		assert.NotEmpty(t, odd.UnderOdds)
 	}
-}
-
-func TestGetNflTotalsOdds(t *testing.T) {
-	totalOdds := GetNflTotalsOdds()
-	assert.NotEmpty(t, totalOdds)
 }

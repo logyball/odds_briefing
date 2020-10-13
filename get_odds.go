@@ -20,8 +20,7 @@ func GetNflTotalsOdds() []string {
 	formattedNflTotalsOdds := formatNflTotalsResp(decodedResp)
 	var retArr []string
 	for _, odds := range formattedNflTotalsOdds.Odds {
-		var formattedString string = ""
-		formattedString += fmt.Sprintf("%sgame. Over Under: %0.1f, Over odds: %d; Under Odds: %d", odds.Teams, odds.Over, odds.OverOdds, odds.UnderOdds)
+		formattedString := formatNflTotalsMessageString(odds)
 		retArr = append(retArr, formattedString)
 	}
 	return retArr
