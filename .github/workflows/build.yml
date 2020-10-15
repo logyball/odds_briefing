@@ -61,7 +61,7 @@ jobs:
       run: go test -v ./...
 
     - name: Test Apis Are Up
-      if: ${{ github.ref }} == "master"   # only tests on merge to master
+      if: github.ref == 'refs/heads/master'   # only tests on merge to master
       env:
         CI_ODDS_KEY: ${{ secrets.ODDS_API_KEY }}
         CI_TWILIO_AUTH_KEY: ${{ secrets.TWILIO_AUTH }}
