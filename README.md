@@ -1,3 +1,5 @@
+[![Build and Test Actions Status](https://github.com/loganballard/odds_briefing/workflows/Build%20and%20Test/badge.svg)](https://github.com/loganballard/odds_briefing/actions)
+
 ### Sports Odds
 
 Getting the Odds API information from [here](https://the-odds-api.com/).  The API Key is free for 500/requests a month.  
