@@ -1,4 +1,4 @@
-package main
+package oddsApi
 
 import (
 	"fmt"
@@ -7,13 +7,14 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/loganballard/odds_briefing/logger"
 	"github.com/stretchr/testify/assert"
 )
 
 func getJSONFilepath(filename string) string {
 	curDir, err := os.Getwd()
 	if err != nil {
-		ErrorHelper(err)
+		logger.ErrorHelper(err)
 	}
 	return filepath.Join(curDir, "example_responses", filename)
 }

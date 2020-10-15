@@ -1,4 +1,4 @@
-package main
+package oddsApi
 
 import (
 	"fmt"
@@ -9,7 +9,7 @@ import (
 func GetActiveSports() []string {
 	oddsAPIKey := getOddsAPIKey()
 	formattedEndpoint := fmt.Sprintf("/v3/sports/?apiKey=%s", oddsAPIKey)
-	respBodyByteArr := makeAPIRequest(formattedEndpoint)
+	respBodyByteArr := MakeAPIRequest(formattedEndpoint)
 	decodedResp := processActiveSportsResponse(respBodyByteArr)
 	return getListOfSportsFromActiveResp(&decodedResp)
 }
@@ -19,7 +19,7 @@ func GetActiveSports() []string {
 func GetNflTotalsOdds() []string {
 	oddsAPIKey := getOddsAPIKey()
 	formattedEndpoint := fmt.Sprintf("/v3/odds/?apiKey=%s&sport=americanfootball_nfl&region=%s&mkt=totals&oddsFormat=american", oddsAPIKey, region)
-	respBodyByteArr := makeAPIRequest(formattedEndpoint)
+	respBodyByteArr := MakeAPIRequest(formattedEndpoint)
 	decodedResp := processNflTotalsResponse(respBodyByteArr)
 	formattedNflTotalsOdds := formatNflTotalsResp(decodedResp)
 	var retArr []string

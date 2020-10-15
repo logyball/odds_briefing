@@ -8,8 +8,9 @@ import (
 	"net/url"
 	"strings"
 
-	config "github.com/loganballard/odds_briefing/config"
+	"github.com/loganballard/odds_briefing/config"
 	logger "github.com/loganballard/odds_briefing/logger"
+	odds "github.com/loganballard/odds_briefing/oddsApi"
 )
 
 func getTwilioInfo() (string, string, string, string) {
@@ -35,7 +36,7 @@ func setTwilioMessageBody(numberTo string, numberFrom string, msgBody string) *s
 
 func buildTwilioRequest(msgBody string) http.Request {
 	if len(msgBody) < 1 {
-		ErrorHelper(errors.New("msg to twilio was empty"))
+		logger.ErrorHelper(errors.New("msg to twilio was empty"))
 	}
 
 	sid, auth, numberFrom, numberTo := getTwilioInfo()
@@ -43,7 +44,7 @@ func buildTwilioRequest(msgBody string) http.Request {
 	formattedMsgBody := setTwilioMessageBody(numberTo, numberFrom, msgBody)
 	req, err := http.NewRequest("POST", urlStr, formattedMsgBody)
 	if err != nil {
-		ErrorHelper(err)
+		logger.ErrorHelper(err)
 	}
 
 	req.SetBasicAuth(sid, auth)
@@ -59,18 +60,18 @@ func sendTwilioMsgFromGeneratedOddsData(gamblingMsg string) error {
 	logger.Info(fmt.Sprintf("Sending Request to Twilio API: %v\n", msgReq))
 	resp, err := client.Do(&msgReq)
 	if err != nil {
-		ErrorHelper(err)
+		logger.ErrorHelper(err)
 	}
 	respBody, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		ErrorHelper(err)
+		logger.ErrorHelper(err)
 	}
 	logger.Info(fmt.Sprintf("Twilio API Response: %v", string(respBody)))
 	return nil
 }
 
 func sendFirstTotalsOddsAsMessage() error {
-	nflTotalsForThisWeek := GetNflTotalsOdds()
+	nflTotalsForThisWeek := odds.GetNflTotalsOdds()
 	msgToSend := nflTotalsForThisWeek[0]
 	err := sendTwilioMsgFromGeneratedOddsData(msgToSend)
 	return err
@@ -80,7 +81,7 @@ func sendFirstTotalsOddsAsMessage() error {
 func sendFirstXTotalsOddsAsMessage(x int) error {
 	var err error
 
-	nflTotalsForThisWeek := GetNflTotalsOdds()
+	nflTotalsForThisWeek := odds.GetNflTotalsOdds()
 
 	for i, msgToSend := range nflTotalsForThisWeek {
 		if i >= (x - 1) {
@@ -88,7 +89,7 @@ func sendFirstXTotalsOddsAsMessage(x int) error {
 		}
 		err = sendTwilioMsgFromGeneratedOddsData(msgToSend)
 		if err != nil {
-			ErrorHelper(err)
+			logger.ErrorHelper(err)
 		}
 	}
 
