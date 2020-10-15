@@ -26,6 +26,12 @@ jobs:
       run: go build -v .
       
     - name: Test
+      env:
+        CI_ODDS_KEY: ${{ secrets.ODDS_API_KEY }}
+        CI_TWILIO_AUTH_KEY: ${{ secrets.TWILIO_AUTH }}
+        CI_TWILIO_SID: ${{ secrets.TWILIO_SID }}
+        CI_TWILIO_NUMBER_TO: ${{ secrets.TWILIO_NUMBER_TO }}
+        CI_TWILIO_NUMBER_FROM: ${{ secrets.TWILIO_NUMBER_FROM }}
       run: go test -v .
 
     - name: Test Apis Are Up
