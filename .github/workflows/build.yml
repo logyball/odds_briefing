@@ -25,6 +25,9 @@ jobs:
     - name: format code
       run: go fmt .
 
+    - name: vet code
+      run: go vet .
+
     # Commenting out for now, holy moly
     # - name: lint code
     #   run: |
