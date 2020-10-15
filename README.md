@@ -16,12 +16,12 @@ Copy [credentials.yml.example](./credentials/credentials.yml.example) and call i
 
 To test:
 
-`$> go test -v`
+`$> go test -v ./...`
 
 To test that the api calls are working:
 
-`$> go test -v -tags=api_tests`
+`$> go test -v ./... -tags=api_tests`
 
 If you really want to run up your Twilio bill:
 
-`$> TWILIO_TESTS=true go test -v -tags=api_tests`
+`$> TWILIO_TESTS=true go test -v ./... -tags=api_tests`
