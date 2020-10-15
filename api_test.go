@@ -11,7 +11,7 @@ import (
 	"os"
 	"testing"
 
-	odds "github.com/loganballard/odds_briefing/odds_api"
+	odds "github.com/loganballard/odds_briefing/oddsapi"
 	"github.com/stretchr/testify/assert"
 )
 
