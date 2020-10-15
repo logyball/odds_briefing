@@ -22,9 +22,22 @@ jobs:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
 
+    - name: format code
+      run: go fmt .
+
+    # Commenting out for now, holy moly
+    # - name: lint code
+    #   run: |
+    #     go get -u golang.org/x/lint/golint
+    #     golint ./...
+
     - name: Build
       run: go build -v .
       
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
     - name: Test
       env:
         CI_ODDS_KEY: ${{ secrets.ODDS_API_KEY }}
