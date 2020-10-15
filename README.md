@@ -24,4 +24,4 @@ To test that the api calls are working:
 
 If you really want to run up your Twilio bill:
 
-`$> TEST_HARMFUL_STUFF=true go test -v -tags=api_tests`
+`$> TWILIO_TESTS=true go test -v -tags=api_tests`
