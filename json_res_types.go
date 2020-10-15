@@ -1,11 +1,12 @@
 package main
 
+// ActiveSportsResponse is an array of sports that are currently gamble-able
 type ActiveSportsResponse struct {
 	Success bool                `json:"success"`
-	Data    []ActiveSportsEntry `json:"data"`
+	Data    []activeSportsEntry `json:"data"`
 }
 
-type ActiveSportsEntry struct {
+type activeSportsEntry struct {
 	Key     string `json:"key"`
 	Active  bool   `json:"active"`
 	Group   string `json:"group"`
@@ -13,29 +14,29 @@ type ActiveSportsEntry struct {
 	Title   string `json:"title"`
 }
 
-type TotalsOddsResponse struct {
+type totalsOddsResponse struct {
 	Success bool              `json:"success"`
-	Games   []TotalsOddsEntry `json:"data"`
+	Games   []totalsOddsEntry `json:"data"`
 }
 
-type TotalsOddsEntry struct {
+type totalsOddsEntry struct {
 	Teams      []string              `json:"teams"`
 	Gametime   int64                 `json:"commence_time"`
-	Sites      []OddsTotalsSiteEntry `json:"sites"`
+	Sites      []oddsTotalsSiteEntry `json:"sites"`
 	SitesCount int                   `json:"sites_count"`
 }
 
-type OddsTotalsSiteEntry struct {
+type oddsTotalsSiteEntry struct {
 	Site            string     `json:"site_nice"`
 	UpdateTimestamp int64      `json:"last_update"`
-	Odds            TotalsOdds `json:"odds"`
+	Odds            totalsOdds `json:"odds"`
 }
 
-type TotalsOdds struct {
-	Totals TotalObj `json:"totals"`
+type totalsOdds struct {
+	Totals totalObj `json:"totals"`
 }
 
-type TotalObj struct {
+type totalObj struct {
 	Points      []interface{} `json:"points"`
 	PointsStr   []string
 	PointsFloat []float64
@@ -44,27 +45,27 @@ type TotalObj struct {
 }
 
 type oddsH2hSiteEntry struct {
-	site_key    string
-	Site_nice   string
-	Last_update int64
-	Odds        h2hOdds
+	SiteKey    string  `json:"site_key"`
+	SiteNice   string  `json:"site_nice"`
+	LastUpdate int64   `json:"last_update"`
+	Odds       h2hOdds `json:"odds"`
 }
 
 type h2hOdds struct {
 	H2h []float64
 }
 
-type H2hOddsResponse struct {
+type h2hOddsResponse struct {
 	Success bool
 	Data    []h2hOddsEntry
 }
 
 type h2hOddsEntry struct {
-	sport_key     string
-	sport_nice    string
-	Teams         []string
-	commence_time int64
-	Home_team     string
-	Sites         []oddsH2hSiteEntry
-	Sites_count   int
+	SportKey     string             `json:"sport_key"`
+	SportNice    string             `json:"sport_nice"`
+	Teams        []string           `json:"teams"`
+	CommenceTime int64              `json:"commence_time"`
+	HomeTeam     string             `json:"home_team"`
+	Sites        []oddsH2hSiteEntry `json:"sites"`
+	SitesCount   int                `json:"sites_count"`
 }

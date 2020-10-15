@@ -4,18 +4,22 @@ import (
 	"fmt"
 )
 
+// GetActiveSports retrieves the sports currently accepting Bets
+// according to the-odds-api
 func GetActiveSports() []string {
-	oddsApiKey := getOddsApiKey()
-	formattedEndpoint := fmt.Sprintf("/v3/sports/?apiKey=%s", oddsApiKey)
-	respBodyByteArr := makeApiRequest(formattedEndpoint)
+	oddsAPIKey := getOddsAPIKey()
+	formattedEndpoint := fmt.Sprintf("/v3/sports/?apiKey=%s", oddsAPIKey)
+	respBodyByteArr := makeAPIRequest(formattedEndpoint)
 	decodedResp := processActiveSportsResponse(respBodyByteArr)
 	return getListOfSportsFromActiveResp(&decodedResp)
 }
 
+// GetNflTotalsOdds retrieves an array of strings containing a message
+// that can be user-read regarding NFL Over/Unders for the upcoming week
 func GetNflTotalsOdds() []string {
-	oddsApiKey := getOddsApiKey()
-	formattedEndpoint := fmt.Sprintf("/v3/odds/?apiKey=%s&sport=americanfootball_nfl&region=%s&mkt=totals&oddsFormat=american", oddsApiKey, region)
-	respBodyByteArr := makeApiRequest(formattedEndpoint)
+	oddsAPIKey := getOddsAPIKey()
+	formattedEndpoint := fmt.Sprintf("/v3/odds/?apiKey=%s&sport=americanfootball_nfl&region=%s&mkt=totals&oddsFormat=american", oddsAPIKey, region)
+	respBodyByteArr := makeAPIRequest(formattedEndpoint)
 	decodedResp := processNflTotalsResponse(respBodyByteArr)
 	formattedNflTotalsOdds := formatNflTotalsResp(decodedResp)
 	var retArr []string
@@ -26,16 +30,16 @@ func GetNflTotalsOdds() []string {
 	return retArr
 }
 
-func GetNflH2hOdds() { // TODO - IMPLEMENT []string {
-	oddsApiKey := getOddsApiKey()
-	formattedEndpoint := fmt.Sprintf("/v3/odds/?apiKey=%s&sport=americanfootball_nfl&region=%s&mkt=h2h&oddsFormat=american", oddsApiKey, region)
-	respBodyByteArr := makeApiRequest(formattedEndpoint)
-	fmt.Printf("%T", respBodyByteArr)
-}
+// func GetNflH2hOdds() { // TODO - IMPLEMENT []string {
+// 	oddsAPIKey := getOddsAPIKey()
+// 	formattedEndpoint := fmt.Sprintf("/v3/odds/?apiKey=%s&sport=americanfootball_nfl&region=%s&mkt=h2h&oddsFormat=american", oddsAPIKey, region)
+// 	respBodyByteArr := makeAPIRequest(formattedEndpoint)
+// 	fmt.Printf("%T", respBodyByteArr)
+// }
 
-func GetNflSpreadsOdds() { // TODO - IMPLEMENT []string {
-	oddsApiKey := getOddsApiKey()
-	formattedEndpoint := fmt.Sprintf("/v3/odds/?apiKey=%s&sport=americanfootball_nfl&region=%s&mkt=spreads&oddsFormat=american", oddsApiKey, region)
-	respBodyByteArr := makeApiRequest(formattedEndpoint)
-	fmt.Printf("%T", respBodyByteArr)
-}
+// func GetNflSpreadsOdds() { // TODO - IMPLEMENT []string {
+// 	oddsAPIKey := getOddsAPIKey()
+// 	formattedEndpoint := fmt.Sprintf("/v3/odds/?apiKey=%s&sport=americanfootball_nfl&region=%s&mkt=spreads&oddsFormat=american", oddsAPIKey, region)
+// 	respBodyByteArr := makeAPIRequest(formattedEndpoint)
+// 	fmt.Printf("%T", respBodyByteArr)
+// }

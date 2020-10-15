@@ -14,8 +14,9 @@ import (
 
 var credsFileName string = filepath.Join("credentials", "credentials.yml")
 
+// Credentials houses keys for the-odds-api and twilio
 type Credentials struct {
-	OddsApiKey       string `yaml:"odds_api_key"`
+	OddsAPIKey       string `yaml:"odds_api_key"`
 	TwilioSid        string `yaml:"twilio_sid"`
 	TwilioAuthKey    string `yaml:"twilio_auth_key"`
 	TwilioNumberFrom string `yaml:"twilio_number_from"`
@@ -34,7 +35,7 @@ func getCredsFilePath() string {
 }
 
 func (c *Credentials) loadCredentialsCI() *Credentials {
-	c.OddsApiKey = os.Getenv("CI_ODDS_KEY")
+	c.OddsAPIKey = os.Getenv("CI_ODDS_KEY")
 	c.TwilioAuthKey = os.Getenv("CI_TWILIO_AUTH_KEY")
 	c.TwilioSid = os.Getenv("CI_TWILIO_SID")
 	c.TwilioNumberTo = os.Getenv("CI_TWILIO_NUMBER_TO")
@@ -42,6 +43,7 @@ func (c *Credentials) loadCredentialsCI() *Credentials {
 	return c
 }
 
+// LoadCredentials reads the credentials.yml file and gets api keys
 func (c *Credentials) LoadCredentials() *Credentials {
 	credentialsFileName := getCredsFilePath()
 

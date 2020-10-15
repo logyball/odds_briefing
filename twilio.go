@@ -18,7 +18,7 @@ func getTwilioInfo() (string, string, string, string) {
 	return c.TwilioSid, c.TwilioAuthKey, c.TwilioNumberFrom, c.TwilioNumberTo
 }
 
-func setUrlForMessaging(sid string) string {
+func setURLForMessaging(sid string) string {
 	return "https://api.twilio.com/2010-04-01/Accounts/" + sid + "/Messages.json"
 }
 
@@ -35,11 +35,11 @@ func setTwilioMessageBody(numberTo string, numberFrom string, msgBody string) *s
 
 func buildTwilioRequest(msgBody string) http.Request {
 	if len(msgBody) < 1 {
-		ErrorHelper(errors.New("msg to twilio was empty!"))
+		ErrorHelper(errors.New("msg to twilio was empty"))
 	}
 
 	sid, auth, numberFrom, numberTo := getTwilioInfo()
-	urlStr := setUrlForMessaging(sid)
+	urlStr := setURLForMessaging(sid)
 	formattedMsgBody := setTwilioMessageBody(numberTo, numberFrom, msgBody)
 	req, err := http.NewRequest("POST", urlStr, formattedMsgBody)
 	if err != nil {
@@ -69,7 +69,7 @@ func sendTwilioMsgFromGeneratedOddsData(gamblingMsg string) error {
 	return nil
 }
 
-func SendFirstTotalsOddsAsMessage() error {
+func sendFirstTotalsOddsAsMessage() error {
 	nflTotalsForThisWeek := GetNflTotalsOdds()
 	msgToSend := nflTotalsForThisWeek[0]
 	err := sendTwilioMsgFromGeneratedOddsData(msgToSend)
@@ -77,7 +77,7 @@ func SendFirstTotalsOddsAsMessage() error {
 }
 
 // PRETTY MUCH NEVER DO THIS
-func SendFirstXTotalsOddsAsMessage(x int) error {
+func sendFirstXTotalsOddsAsMessage(x int) error {
 	var err error
 
 	nflTotalsForThisWeek := GetNflTotalsOdds()

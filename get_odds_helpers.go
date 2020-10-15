@@ -14,15 +14,15 @@ import (
 	logger "github.com/loganballard/odds_briefing/logger"
 )
 
-const baseApiUrl string = "https://api.the-odds-api.com"
+const baseAPIURL string = "https://api.the-odds-api.com"
 const region string = "us" // only bet on USA!
 
 // SHARED FUNCTIONS
 
-func getOddsApiKey() string {
+func getOddsAPIKey() string {
 	var credFile config.Credentials
 	credFile.LoadCredentials()
-	return credFile.OddsApiKey
+	return credFile.OddsAPIKey
 }
 
 func round(x, unit float64) float64 {
@@ -42,15 +42,15 @@ func h2hToAmericanOdds(h2hOdds string) int {
 }
 
 // TODO - rewrite as http client rather than endpoint
-func makeApiRequest(endpoint string) []byte {
-	finalUrl := baseApiUrl + endpoint
+func makeAPIRequest(endpoint string) []byte {
+	finalURL := baseAPIURL + endpoint
 
-	resp, err := http.Get(finalUrl)
+	resp, err := http.Get(finalURL)
 	if err != nil {
 		ErrorHelper(err)
 	}
 	if resp.StatusCode != 200 {
-		logger.Warn(fmt.Sprintf("non 200 error code for: %s", finalUrl))
+		logger.Warn(fmt.Sprintf("non 200 error code for: %s", finalURL))
 		ErrorHelper(err)
 	}
 	body, err := ioutil.ReadAll(resp.Body)
@@ -90,7 +90,7 @@ func getListOfSportsFromActiveResp(decodedActiveSportsResp *ActiveSportsResponse
 
 // NFL TOTALS API CALL FUNCTIONS
 
-func convertTotalsPointsToStringAndFloat(totals *TotalsOddsResponse) {
+func convertTotalsPointsToStringAndFloat(totals *totalsOddsResponse) {
 	for i, entry := range totals.Games {
 		for j, site := range entry.Sites {
 			for k, pts := range site.Odds.Totals.Points {
@@ -105,8 +105,8 @@ func convertTotalsPointsToStringAndFloat(totals *TotalsOddsResponse) {
 	}
 }
 
-func processNflTotalsResponse(jsonResponseBody []byte) TotalsOddsResponse {
-	var decodedNflTotalsResp TotalsOddsResponse
+func processNflTotalsResponse(jsonResponseBody []byte) totalsOddsResponse {
+	var decodedNflTotalsResp totalsOddsResponse
 	err := json.Unmarshal(jsonResponseBody, &decodedNflTotalsResp)
 	if err != nil {
 		ErrorHelper(err)
@@ -127,7 +127,7 @@ func makeTwoTeamNamesIntoOne(teamNames []string) string {
 	return bothNames
 }
 
-func makeAdjustedOverUnder(sites []OddsTotalsSiteEntry) (float64, float64) {
+func makeAdjustedOverUnder(sites []oddsTotalsSiteEntry) (float64, float64) {
 	var totalOverUnder float64 = 0
 	for _, site := range sites {
 		totalOverUnder += site.Odds.Totals.PointsFloat[0]
@@ -141,7 +141,7 @@ func makeAdjustedOverUnderOdds() (int, int) {
 	return -110, -110
 }
 
-func formatNflTotalsResp(totalsResp TotalsOddsResponse) FormattedTotalsOdds {
+func formatNflTotalsResp(totalsResp totalsOddsResponse) FormattedTotalsOdds {
 	var totalOdds FormattedTotalsOdds
 	totalOdds.OddsType = "Totals"
 	totalOdds.Sport = "NFL"

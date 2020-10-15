@@ -18,7 +18,7 @@ const HARMFUL_TEST_ENV_VAR string = "TWILIO_TESTS"
 
 ////// Odds API - Free but limited to 500 req/mo
 func TestMakeApiRequestCanReachBaseUrl(t *testing.T) {
-	body := makeApiRequest("")
+	body := makeAPIRequest("")
 	assert.NotNil(t, body, "body of response was nil")
 }
 
@@ -50,7 +50,7 @@ func TestTwilioApiWrapper(t *testing.T) {
 
 func TestSendingFirstTotalsOddsAsMessage(t *testing.T) {
 	if os.Getenv(HARMFUL_TEST_ENV_VAR) == "true" {
-		err := SendFirstTotalsOddsAsMessage()
+		err := sendFirstTotalsOddsAsMessage()
 		assert.Nil(t, err, "error when sending message")
 	}
 	t.Skip()
@@ -58,7 +58,7 @@ func TestSendingFirstTotalsOddsAsMessage(t *testing.T) {
 
 func TestSendingFirstFiveTotalsOddsAsMessage(t *testing.T) {
 	if os.Getenv(HARMFUL_TEST_ENV_VAR) == "true" {
-		err := SendFirstXTotalsOddsAsMessage(5)
+		err := sendFirstXTotalsOddsAsMessage(5)
 		assert.Nil(t, err, "error when sending message")
 	}
 	t.Skip()
