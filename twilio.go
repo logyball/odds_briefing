@@ -3,7 +3,6 @@ package main
 import (
 	"errors"
 	"io/ioutil"
-	"log"
 	"net/http"
 	"net/url"
 	"strings"
@@ -52,6 +51,8 @@ func buildTwilioRequest(msgBody string) http.Request {
 func sendTwilioMsgFromGeneratedOddsData(gamblingMsg string) error {
 	msgReq := buildTwilioRequest(gamblingMsg)
 	client := &http.Client{}
+
+	InfoLogger.Printf("Sending Request to Twilio API: %v\n", msgReq)
 	resp, err := client.Do(&msgReq)
 	if err != nil {
 		ErrorHelper(err)
@@ -60,7 +61,7 @@ func sendTwilioMsgFromGeneratedOddsData(gamblingMsg string) error {
 	if err != nil {
 		ErrorHelper(err)
 	}
-	log.Printf("Response: %v", string(respBody))
+	InfoLogger.Printf("Twilio API Response: %v", string(respBody))
 	return nil
 }
 

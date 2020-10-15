@@ -5,499 +5,609 @@
             "sport_key": "americanfootball_nfl",
             "sport_nice": "NFL",
             "teams": [
-                "Kansas City Chiefs",
-                "Las Vegas Raiders"
+                "Carolina Panthers",
+                "Chicago Bears"
             ],
-            "commence_time": 1602435600,
-            "home_team": "Kansas City Chiefs",
+            "commence_time": 1603040400,
+            "home_team": "Carolina Panthers",
             "sites": [
                 {
                     "site_key": "fanduel",
                     "site_nice": "FanDuel",
-                    "last_update": 1602448195,
+                    "last_update": 1602720134,
                     "odds": {
                         "h2h": [
-                            1600,
-                            -6000
-                        ]
-                    }
-                },
-                {
-                    "site_key": "williamhill_us",
-                    "site_nice": "William Hill (US)",
-                    "last_update": 1602448122,
-                    "odds": {
-                        "h2h": [
-                            -500,
-                            400
-                        ]
-                    }
-                },
-                {
-                    "site_key": "gtbets",
-                    "site_nice": "GTbets",
-                    "last_update": 1602448230,
-                    "odds": {
-                        "h2h": [
-                            464,
-                            -833
-                        ]
-                    }
-                },
-                {
-                    "site_key": "betfair",
-                    "site_nice": "Betfair",
-                    "last_update": 1602448104,
-                    "odds": {
-                        "h2h": [
-                            1650,
-                            -2000
-                        ],
-                        "h2h_lay": [
-                            2000,
-                            -1667
-                        ]
-                    }
-                },
-                {
-                    "site_key": "betmgm",
-                    "site_nice": "BetMGM",
-                    "last_update": 1602448212,
-                    "odds": {
-                        "h2h": [
-                            1400,
-                            -5000
-                        ]
-                    }
-                },
-                {
-                    "site_key": "pointsbetus",
-                    "site_nice": "PointsBet (US)",
-                    "last_update": 1602448165,
-                    "odds": {
-                        "h2h": [
-                            -100000,
-                            -100000
-                        ]
-                    }
-                }
-            ],
-            "sites_count": 6
-        },
-        {
-            "sport_key": "americanfootball_nfl",
-            "sport_nice": "NFL",
-            "teams": [
-                "Miami Dolphins",
-                "San Francisco 49ers"
-            ],
-            "commence_time": 1602446700,
-            "home_team": "San Francisco 49ers",
-            "sites": [
-                {
-                    "site_key": "williamhill_us",
-                    "site_nice": "William Hill (US)",
-                    "last_update": 1602448538,
-                    "odds": {
-                        "h2h": [
-                            330,
-                            -410
-                        ]
-                    }
-                },
-                {
-                    "site_key": "fanduel",
-                    "site_nice": "FanDuel",
-                    "last_update": 1602448535,
-                    "odds": {
-                        "h2h": [
-                            -144,
-                            118
-                        ]
-                    }
-                },
-                {
-                    "site_key": "mybookieag",
-                    "site_nice": "MyBookie.ag",
-                    "last_update": 1602448554,
-                    "odds": {
-                        "h2h": [
-                            190,
-                            -270
-                        ]
-                    }
-                },
-                {
-                    "site_key": "gtbets",
-                    "site_nice": "GTbets",
-                    "last_update": 1602448533,
-                    "odds": {
-                        "h2h": [
-                            -149,
-                            112
-                        ]
-                    }
-                },
-                {
-                    "site_key": "betfair",
-                    "site_nice": "Betfair",
-                    "last_update": 1602448562,
-                    "odds": {
-                        "h2h": [
-                            -135,
-                            104
-                        ],
-                        "h2h_lay": [
-                            -104,
-                            136
-                        ]
-                    }
-                },
-                {
-                    "site_key": "betmgm",
-                    "site_nice": "BetMGM",
-                    "last_update": 1602448557,
-                    "odds": {
-                        "h2h": [
-                            -149,
-                            120
-                        ]
-                    }
-                },
-                {
-                    "site_key": "draftkings",
-                    "site_nice": "DraftKings",
-                    "last_update": 1602448556,
-                    "odds": {
-                        "h2h": [
-                            -167,
-                            133
-                        ]
-                    }
-                },
-                {
-                    "site_key": "betrivers",
-                    "site_nice": "BetRivers",
-                    "last_update": 1602448551,
-                    "odds": {
-                        "h2h": [
-                            -167,
-                            133
-                        ]
-                    }
-                },
-                {
-                    "site_key": "unibet",
-                    "site_nice": "Unibet",
-                    "last_update": 1602448567,
-                    "odds": {
-                        "h2h": [
-                            -167,
-                            133
-                        ]
-                    }
-                },
-                {
-                    "site_key": "pointsbetus",
-                    "site_nice": "PointsBet (US)",
-                    "last_update": 1602448554,
-                    "odds": {
-                        "h2h": [
-                            -100000,
-                            -100000
-                        ]
-                    }
-                }
-            ],
-            "sites_count": 10
-        },
-        {
-            "sport_key": "americanfootball_nfl",
-            "sport_nice": "NFL",
-            "teams": [
-                "Minnesota Vikings",
-                "Seattle Seahawks"
-            ],
-            "commence_time": 1602462000,
-            "home_team": "Seattle Seahawks",
-            "sites": [
-                {
-                    "site_key": "williamhill_us",
-                    "site_nice": "William Hill (US)",
-                    "last_update": 1602448538,
-                    "odds": {
-                        "h2h": [
-                            250,
-                            -300
-                        ]
-                    }
-                },
-                {
-                    "site_key": "fanduel",
-                    "site_nice": "FanDuel",
-                    "last_update": 1602448535,
-                    "odds": {
-                        "h2h": [
-                            240,
-                            -295
-                        ]
-                    }
-                },
-                {
-                    "site_key": "bookmaker",
-                    "site_nice": "Bookmaker",
-                    "last_update": 1602448557,
-                    "odds": {
-                        "h2h": [
-                            245,
-                            -300
-                        ]
-                    }
-                },
-                {
-                    "site_key": "pointsbetus",
-                    "site_nice": "PointsBet (US)",
-                    "last_update": 1602448554,
-                    "odds": {
-                        "h2h": [
-                            240,
-                            -300
+                            -124,
+                            106
                         ]
                     }
                 },
                 {
                     "site_key": "betonlineag",
                     "site_nice": "BetOnline.ag",
-                    "last_update": 1602448572,
+                    "last_update": 1602720207,
                     "odds": {
                         "h2h": [
-                            253,
-                            -303
-                        ]
-                    }
-                },
-                {
-                    "site_key": "betrivers",
-                    "site_nice": "BetRivers",
-                    "last_update": 1602448551,
-                    "odds": {
-                        "h2h": [
-                            245,
-                            -286
-                        ]
-                    }
-                },
-                {
-                    "site_key": "unibet",
-                    "site_nice": "Unibet",
-                    "last_update": 1602448567,
-                    "odds": {
-                        "h2h": [
-                            245,
-                            -286
+                            -125,
+                            104
                         ]
                     }
                 },
                 {
                     "site_key": "lowvig",
                     "site_nice": "LowVig.ag",
-                    "last_update": 1602448577,
+                    "last_update": 1602720201,
                     "odds": {
                         "h2h": [
-                            253,
-                            -303
+                            -125,
+                            105
+                        ]
+                    }
+                },
+                {
+                    "site_key": "williamhill_us",
+                    "site_nice": "William Hill (US)",
+                    "last_update": 1602720144,
+                    "odds": {
+                        "h2h": [
+                            -125,
+                            105
+                        ]
+                    }
+                },
+                {
+                    "site_key": "bookmaker",
+                    "site_nice": "Bookmaker",
+                    "last_update": 1602720226,
+                    "odds": {
+                        "h2h": [
+                            -125,
+                            105
+                        ]
+                    }
+                },
+                {
+                    "site_key": "unibet",
+                    "site_nice": "Unibet",
+                    "last_update": 1602720112,
+                    "odds": {
+                        "h2h": [
+                            -120,
+                            106
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betrivers",
+                    "site_nice": "BetRivers",
+                    "last_update": 1602720086,
+                    "odds": {
+                        "h2h": [
+                            -121,
+                            106
                         ]
                     }
                 },
                 {
                     "site_key": "draftkings",
                     "site_nice": "DraftKings",
-                    "last_update": 1602448556,
+                    "last_update": 1602720299,
                     "odds": {
                         "h2h": [
-                            245,
-                            -286
+                            -121,
+                            106
                         ]
                     }
                 },
                 {
                     "site_key": "betmgm",
                     "site_nice": "BetMGM",
-                    "last_update": 1602448557,
+                    "last_update": 1602720033,
                     "odds": {
                         "h2h": [
-                            240,
-                            -303
-                        ]
-                    }
-                },
-                {
-                    "site_key": "bovada",
-                    "site_nice": "Bovada",
-                    "last_update": 1602448561,
-                    "odds": {
-                        "h2h": [
-                            255,
-                            -310
+                            -120,
+                            105
                         ]
                     }
                 },
                 {
                     "site_key": "mybookieag",
                     "site_nice": "MyBookie.ag",
-                    "last_update": 1602448554,
+                    "last_update": 1602720201,
                     "odds": {
                         "h2h": [
-                            300,
-                            -400
+                            -125,
+                            105
+                        ]
+                    }
+                },
+                {
+                    "site_key": "pointsbetus",
+                    "site_nice": "PointsBet (US)",
+                    "last_update": 1602720143,
+                    "odds": {
+                        "h2h": [
+                            -125,
+                            105
                         ]
                     }
                 },
                 {
                     "site_key": "betfair",
                     "site_nice": "Betfair",
-                    "last_update": 1602448562,
+                    "last_update": 1602720275,
                     "odds": {
                         "h2h": [
-                            265,
-                            -278
+                            -112,
+                            110
                         ],
                         "h2h_lay": [
-                            275,
-                            -263
+                            -110,
+                            112
                         ]
                     }
                 },
                 {
                     "site_key": "intertops",
                     "site_nice": "Intertops",
-                    "last_update": 1602448553,
+                    "last_update": 1602720166,
                     "odds": {
                         "h2h": [
-                            250,
-                            -300
+                            -125,
+                            105
                         ]
                     }
                 },
                 {
                     "site_key": "gtbets",
                     "site_nice": "GTbets",
-                    "last_update": 1602448533,
+                    "last_update": 1602720249,
                     "odds": {
                         "h2h": [
-                            255,
-                            -310
+                            -125,
+                            105
                         ]
                     }
                 }
             ],
-            "sites_count": 15
+            "sites_count": 14
         },
         {
             "sport_key": "americanfootball_nfl",
             "sport_nice": "NFL",
             "teams": [
-                "Los Angeles Chargers",
-                "New Orleans Saints"
+                "Detroit Lions",
+                "Jacksonville Jaguars"
             ],
-            "commence_time": 1602548100,
-            "home_team": "New Orleans Saints",
+            "commence_time": 1603040400,
+            "home_team": "Jacksonville Jaguars",
             "sites": [
-                {
-                    "site_key": "bovada",
-                    "site_nice": "Bovada",
-                    "last_update": 1602448561,
-                    "odds": {
-                        "h2h": [
-                            270,
-                            -340
-                        ]
-                    }
-                },
-                {
-                    "site_key": "williamhill_us",
-                    "site_nice": "William Hill (US)",
-                    "last_update": 1602448538,
-                    "odds": {
-                        "h2h": [
-                            285,
-                            -345
-                        ]
-                    }
-                },
-                {
-                    "site_key": "bookmaker",
-                    "site_nice": "Bookmaker",
-                    "last_update": 1602448557,
-                    "odds": {
-                        "h2h": [
-                            274,
-                            -340
-                        ]
-                    }
-                },
-                {
-                    "site_key": "betonlineag",
-                    "site_nice": "BetOnline.ag",
-                    "last_update": 1602448572,
-                    "odds": {
-                        "h2h": [
-                            285,
-                            -345
-                        ]
-                    }
-                },
                 {
                     "site_key": "lowvig",
                     "site_nice": "LowVig.ag",
-                    "last_update": 1602448577,
+                    "last_update": 1602720201,
                     "odds": {
                         "h2h": [
-                            285,
-                            -340
-                        ]
-                    }
-                },
-                {
-                    "site_key": "betrivers",
-                    "site_nice": "BetRivers",
-                    "last_update": 1602448551,
-                    "odds": {
-                        "h2h": [
-                            290,
-                            -345
-                        ]
-                    }
-                },
-                {
-                    "site_key": "draftkings",
-                    "site_nice": "DraftKings",
-                    "last_update": 1602448556,
-                    "odds": {
-                        "h2h": [
-                            290,
-                            -345
-                        ]
-                    }
-                },
-                {
-                    "site_key": "unibet",
-                    "site_nice": "Unibet",
-                    "last_update": 1602448567,
-                    "odds": {
-                        "h2h": [
-                            290,
-                            -345
+                            -175,
+                            155
                         ]
                     }
                 },
                 {
                     "site_key": "fanduel",
                     "site_nice": "FanDuel",
-                    "last_update": 1602448535,
+                    "last_update": 1602720134,
                     "odds": {
                         "h2h": [
-                            290,
+                            -190,
+                            160
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betonlineag",
+                    "site_nice": "BetOnline.ag",
+                    "last_update": 1602720207,
+                    "odds": {
+                        "h2h": [
+                            -175,
+                            154
+                        ]
+                    }
+                },
+                {
+                    "site_key": "williamhill_us",
+                    "site_nice": "William Hill (US)",
+                    "last_update": 1602720144,
+                    "odds": {
+                        "h2h": [
+                            -175,
+                            155
+                        ]
+                    }
+                },
+                {
+                    "site_key": "bookmaker",
+                    "site_nice": "Bookmaker",
+                    "last_update": 1602720226,
+                    "odds": {
+                        "h2h": [
+                            -190,
+                            163
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betrivers",
+                    "site_nice": "BetRivers",
+                    "last_update": 1602720086,
+                    "odds": {
+                        "h2h": [
+                            -177,
+                            155
+                        ]
+                    }
+                },
+                {
+                    "site_key": "unibet",
+                    "site_nice": "Unibet",
+                    "last_update": 1602720112,
+                    "odds": {
+                        "h2h": [
+                            -175,
+                            155
+                        ]
+                    }
+                },
+                {
+                    "site_key": "draftkings",
+                    "site_nice": "DraftKings",
+                    "last_update": 1602720299,
+                    "odds": {
+                        "h2h": [
+                            -177,
+                            155
+                        ]
+                    }
+                },
+                {
+                    "site_key": "mybookieag",
+                    "site_nice": "MyBookie.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            -175,
+                            155
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betmgm",
+                    "site_nice": "BetMGM",
+                    "last_update": 1602720033,
+                    "odds": {
+                        "h2h": [
+                            -189,
+                            160
+                        ]
+                    }
+                },
+                {
+                    "site_key": "pointsbetus",
+                    "site_nice": "PointsBet (US)",
+                    "last_update": 1602720143,
+                    "odds": {
+                        "h2h": [
+                            -185,
+                            155
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betfair",
+                    "site_nice": "Betfair",
+                    "last_update": 1602720275,
+                    "odds": {
+                        "h2h": [
+                            -169,
+                            164
+                        ],
+                        "h2h_lay": [
+                            -164,
+                            168
+                        ]
+                    }
+                },
+                {
+                    "site_key": "intertops",
+                    "site_nice": "Intertops",
+                    "last_update": 1602720166,
+                    "odds": {
+                        "h2h": [
+                            -190,
+                            165
+                        ]
+                    }
+                },
+                {
+                    "site_key": "gtbets",
+                    "site_nice": "GTbets",
+                    "last_update": 1602720249,
+                    "odds": {
+                        "h2h": [
+                            -180,
+                            160
+                        ]
+                    }
+                }
+            ],
+            "sites_count": 14
+        },
+        {
+            "sport_key": "americanfootball_nfl",
+            "sport_nice": "NFL",
+            "teams": [
+                "Cleveland Browns",
+                "Pittsburgh Steelers"
+            ],
+            "commence_time": 1603040400,
+            "home_team": "Pittsburgh Steelers",
+            "sites": [
+                {
+                    "site_key": "betonlineag",
+                    "site_nice": "BetOnline.ag",
+                    "last_update": 1602720207,
+                    "odds": {
+                        "h2h": [
+                            152,
+                            -172
+                        ]
+                    }
+                },
+                {
+                    "site_key": "lowvig",
+                    "site_nice": "LowVig.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            152,
+                            -172
+                        ]
+                    }
+                },
+                {
+                    "site_key": "fanduel",
+                    "site_nice": "FanDuel",
+                    "last_update": 1602720134,
+                    "odds": {
+                        "h2h": [
+                            140,
+                            -166
+                        ]
+                    }
+                },
+                {
+                    "site_key": "williamhill_us",
+                    "site_nice": "William Hill (US)",
+                    "last_update": 1602720144,
+                    "odds": {
+                        "h2h": [
+                            150,
+                            -170
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betrivers",
+                    "site_nice": "BetRivers",
+                    "last_update": 1602720086,
+                    "odds": {
+                        "h2h": [
+                            155,
+                            -177
+                        ]
+                    }
+                },
+                {
+                    "site_key": "draftkings",
+                    "site_nice": "DraftKings",
+                    "last_update": 1602720299,
+                    "odds": {
+                        "h2h": [
+                            155,
+                            -177
+                        ]
+                    }
+                },
+                {
+                    "site_key": "unibet",
+                    "site_nice": "Unibet",
+                    "last_update": 1602720112,
+                    "odds": {
+                        "h2h": [
+                            155,
+                            -175
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betmgm",
+                    "site_nice": "BetMGM",
+                    "last_update": 1602720033,
+                    "odds": {
+                        "h2h": [
+                            150,
+                            -175
+                        ]
+                    }
+                },
+                {
+                    "site_key": "pointsbetus",
+                    "site_nice": "PointsBet (US)",
+                    "last_update": 1602720143,
+                    "odds": {
+                        "h2h": [
+                            150,
+                            -180
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betfair",
+                    "site_nice": "Betfair",
+                    "last_update": 1602720275,
+                    "odds": {
+                        "h2h": [
+                            152,
+                            -167
+                        ],
+                        "h2h_lay": [
+                            168,
+                            -154
+                        ]
+                    }
+                },
+                {
+                    "site_key": "intertops",
+                    "site_nice": "Intertops",
+                    "last_update": 1602720166,
+                    "odds": {
+                        "h2h": [
+                            150,
+                            -170
+                        ]
+                    }
+                },
+                {
+                    "site_key": "bookmaker",
+                    "site_nice": "Bookmaker",
+                    "last_update": 1602720226,
+                    "odds": {
+                        "h2h": [
+                            151,
+                            -175
+                        ]
+                    }
+                },
+                {
+                    "site_key": "gtbets",
+                    "site_nice": "GTbets",
+                    "last_update": 1602720249,
+                    "odds": {
+                        "h2h": [
+                            150,
+                            -170
+                        ]
+                    }
+                },
+                {
+                    "site_key": "mybookieag",
+                    "site_nice": "MyBookie.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            150,
+                            -170
+                        ]
+                    }
+                }
+            ],
+            "sites_count": 14
+        },
+        {
+            "sport_key": "americanfootball_nfl",
+            "sport_nice": "NFL",
+            "teams": [
+                "Cincinnati Bengals",
+                "Indianapolis Colts"
+            ],
+            "commence_time": 1603040400,
+            "home_team": "Indianapolis Colts",
+            "sites": [
+                {
+                    "site_key": "fanduel",
+                    "site_nice": "FanDuel",
+                    "last_update": 1602720134,
+                    "odds": {
+                        "h2h": [
+                            285,
+                            -355
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betonlineag",
+                    "site_nice": "BetOnline.ag",
+                    "last_update": 1602720207,
+                    "odds": {
+                        "h2h": [
+                            305,
+                            -385
+                        ]
+                    }
+                },
+                {
+                    "site_key": "lowvig",
+                    "site_nice": "LowVig.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            305,
+                            -375
+                        ]
+                    }
+                },
+                {
+                    "site_key": "williamhill_us",
+                    "site_nice": "William Hill (US)",
+                    "last_update": 1602720144,
+                    "odds": {
+                        "h2h": [
+                            310,
+                            -380
+                        ]
+                    }
+                },
+                {
+                    "site_key": "bookmaker",
+                    "site_nice": "Bookmaker",
+                    "last_update": 1602720226,
+                    "odds": {
+                        "h2h": [
+                            313,
+                            -395
+                        ]
+                    }
+                },
+                {
+                    "site_key": "unibet",
+                    "site_nice": "Unibet",
+                    "last_update": 1602720112,
+                    "odds": {
+                        "h2h": [
+                            300,
+                            -357
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betrivers",
+                    "site_nice": "BetRivers",
+                    "last_update": 1602720086,
+                    "odds": {
+                        "h2h": [
+                            300,
+                            -360
+                        ]
+                    }
+                },
+                {
+                    "site_key": "draftkings",
+                    "site_nice": "DraftKings",
+                    "last_update": 1602720299,
+                    "odds": {
+                        "h2h": [
+                            300,
                             -360
                         ]
                     }
@@ -505,25 +615,47 @@
                 {
                     "site_key": "mybookieag",
                     "site_nice": "MyBookie.ag",
-                    "last_update": 1602448554,
+                    "last_update": 1602720201,
                     "odds": {
                         "h2h": [
-                            290,
-                            -350
+                            306,
+                            -385
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betmgm",
+                    "site_nice": "BetMGM",
+                    "last_update": 1602720033,
+                    "odds": {
+                        "h2h": [
+                            310,
+                            -385
+                        ]
+                    }
+                },
+                {
+                    "site_key": "pointsbetus",
+                    "site_nice": "PointsBet (US)",
+                    "last_update": 1602720143,
+                    "odds": {
+                        "h2h": [
+                            295,
+                            -390
                         ]
                     }
                 },
                 {
                     "site_key": "betfair",
                     "site_nice": "Betfair",
-                    "last_update": 1602448562,
+                    "last_update": 1602720275,
                     "odds": {
                         "h2h": [
-                            300,
-                            -323
+                            310,
+                            -333
                         ],
                         "h2h_lay": [
-                            320,
+                            340,
                             -303
                         ]
                     }
@@ -531,49 +663,1042 @@
                 {
                     "site_key": "intertops",
                     "site_nice": "Intertops",
-                    "last_update": 1602448553,
+                    "last_update": 1602720166,
                     "odds": {
                         "h2h": [
-                            280,
-                            -350
-                        ]
-                    }
-                },
-                {
-                    "site_key": "pointsbetus",
-                    "site_nice": "PointsBet (US)",
-                    "last_update": 1602448554,
-                    "odds": {
-                        "h2h": [
-                            -100000,
-                            -100000
+                            300,
+                            -380
                         ]
                     }
                 },
                 {
                     "site_key": "gtbets",
                     "site_nice": "GTbets",
-                    "last_update": 1602448533,
+                    "last_update": 1602720249,
                     "odds": {
                         "h2h": [
-                            275,
-                            -350
+                            295,
+                            -390
+                        ]
+                    }
+                }
+            ],
+            "sites_count": 14
+        },
+        {
+            "sport_key": "americanfootball_nfl",
+            "sport_nice": "NFL",
+            "teams": [
+                "Baltimore Ravens",
+                "Philadelphia Eagles"
+            ],
+            "commence_time": 1603040400,
+            "home_team": "Philadelphia Eagles",
+            "sites": [
+                {
+                    "site_key": "fanduel",
+                    "site_nice": "FanDuel",
+                    "last_update": 1602720134,
+                    "odds": {
+                        "h2h": [
+                            -330,
+                            265
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betonlineag",
+                    "site_nice": "BetOnline.ag",
+                    "last_update": 1602720207,
+                    "odds": {
+                        "h2h": [
+                            -357,
+                            280
+                        ]
+                    }
+                },
+                {
+                    "site_key": "lowvig",
+                    "site_nice": "LowVig.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            -350,
+                            280
+                        ]
+                    }
+                },
+                {
+                    "site_key": "williamhill_us",
+                    "site_nice": "William Hill (US)",
+                    "last_update": 1602720144,
+                    "odds": {
+                        "h2h": [
+                            -355,
+                            295
+                        ]
+                    }
+                },
+                {
+                    "site_key": "bookmaker",
+                    "site_nice": "Bookmaker",
+                    "last_update": 1602720226,
+                    "odds": {
+                        "h2h": [
+                            -350,
+                            281
+                        ]
+                    }
+                },
+                {
+                    "site_key": "unibet",
+                    "site_nice": "Unibet",
+                    "last_update": 1602720112,
+                    "odds": {
+                        "h2h": [
+                            -345,
+                            290
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betrivers",
+                    "site_nice": "BetRivers",
+                    "last_update": 1602720086,
+                    "odds": {
+                        "h2h": [
+                            -345,
+                            290
+                        ]
+                    }
+                },
+                {
+                    "site_key": "draftkings",
+                    "site_nice": "DraftKings",
+                    "last_update": 1602720299,
+                    "odds": {
+                        "h2h": [
+                            -345,
+                            290
+                        ]
+                    }
+                },
+                {
+                    "site_key": "mybookieag",
+                    "site_nice": "MyBookie.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            -366,
+                            293
                         ]
                     }
                 },
                 {
                     "site_key": "betmgm",
                     "site_nice": "BetMGM",
-                    "last_update": 1602448557,
+                    "last_update": 1602720033,
                     "odds": {
                         "h2h": [
-                            290,
-                            -357
+                            -357,
+                            290
+                        ]
+                    }
+                },
+                {
+                    "site_key": "pointsbetus",
+                    "site_nice": "PointsBet (US)",
+                    "last_update": 1602720143,
+                    "odds": {
+                        "h2h": [
+                            -360,
+                            280
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betfair",
+                    "site_nice": "Betfair",
+                    "last_update": 1602720275,
+                    "odds": {
+                        "h2h": [
+                            -312,
+                            290
+                        ],
+                        "h2h_lay": [
+                            -286,
+                            320
+                        ]
+                    }
+                },
+                {
+                    "site_key": "intertops",
+                    "site_nice": "Intertops",
+                    "last_update": 1602720166,
+                    "odds": {
+                        "h2h": [
+                            -350,
+                            280
+                        ]
+                    }
+                },
+                {
+                    "site_key": "gtbets",
+                    "site_nice": "GTbets",
+                    "last_update": 1602720249,
+                    "odds": {
+                        "h2h": [
+                            -360,
+                            280
                         ]
                     }
                 }
             ],
-            "sites_count": 15
+            "sites_count": 14
+        },
+        {
+            "sport_key": "americanfootball_nfl",
+            "sport_nice": "NFL",
+            "teams": [
+                "New York Giants",
+                "Washington Football Team"
+            ],
+            "commence_time": 1603040400,
+            "home_team": "New York Giants",
+            "sites": [
+                {
+                    "site_key": "lowvig",
+                    "site_nice": "LowVig.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            -140,
+                            120
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betonlineag",
+                    "site_nice": "BetOnline.ag",
+                    "last_update": 1602720207,
+                    "odds": {
+                        "h2h": [
+                            -135,
+                            115
+                        ]
+                    }
+                },
+                {
+                    "site_key": "fanduel",
+                    "site_nice": "FanDuel",
+                    "last_update": 1602720134,
+                    "odds": {
+                        "h2h": [
+                            -146,
+                            124
+                        ]
+                    }
+                },
+                {
+                    "site_key": "williamhill_us",
+                    "site_nice": "William Hill (US)",
+                    "last_update": 1602720144,
+                    "odds": {
+                        "h2h": [
+                            -140,
+                            120
+                        ]
+                    }
+                },
+                {
+                    "site_key": "bookmaker",
+                    "site_nice": "Bookmaker",
+                    "last_update": 1602720226,
+                    "odds": {
+                        "h2h": [
+                            -145,
+                            125
+                        ]
+                    }
+                },
+                {
+                    "site_key": "unibet",
+                    "site_nice": "Unibet",
+                    "last_update": 1602720112,
+                    "odds": {
+                        "h2h": [
+                            -141,
+                            125
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betrivers",
+                    "site_nice": "BetRivers",
+                    "last_update": 1602720086,
+                    "odds": {
+                        "h2h": [
+                            -141,
+                            125
+                        ]
+                    }
+                },
+                {
+                    "site_key": "draftkings",
+                    "site_nice": "DraftKings",
+                    "last_update": 1602720299,
+                    "odds": {
+                        "h2h": [
+                            -141,
+                            125
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betmgm",
+                    "site_nice": "BetMGM",
+                    "last_update": 1602720033,
+                    "odds": {
+                        "h2h": [
+                            -139,
+                            120
+                        ]
+                    }
+                },
+                {
+                    "site_key": "pointsbetus",
+                    "site_nice": "PointsBet (US)",
+                    "last_update": 1602720143,
+                    "odds": {
+                        "h2h": [
+                            -140,
+                            120
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betfair",
+                    "site_nice": "Betfair",
+                    "last_update": 1602720275,
+                    "odds": {
+                        "h2h": [
+                            -127,
+                            122
+                        ],
+                        "h2h_lay": [
+                            -122,
+                            140
+                        ]
+                    }
+                },
+                {
+                    "site_key": "intertops",
+                    "site_nice": "Intertops",
+                    "last_update": 1602720166,
+                    "odds": {
+                        "h2h": [
+                            -145,
+                            125
+                        ]
+                    }
+                },
+                {
+                    "site_key": "gtbets",
+                    "site_nice": "GTbets",
+                    "last_update": 1602720249,
+                    "odds": {
+                        "h2h": [
+                            -140,
+                            120
+                        ]
+                    }
+                },
+                {
+                    "site_key": "mybookieag",
+                    "site_nice": "MyBookie.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            -140,
+                            120
+                        ]
+                    }
+                }
+            ],
+            "sites_count": 14
+        },
+        {
+            "sport_key": "americanfootball_nfl",
+            "sport_nice": "NFL",
+            "teams": [
+                "Atlanta Falcons",
+                "Minnesota Vikings"
+            ],
+            "commence_time": 1603040400,
+            "home_team": "Minnesota Vikings",
+            "sites": [
+                {
+                    "site_key": "unibet",
+                    "site_nice": "Unibet",
+                    "last_update": 1602720112,
+                    "odds": {
+                        "h2h": [
+                            175,
+                            -200
+                        ]
+                    }
+                },
+                {
+                    "site_key": "williamhill_us",
+                    "site_nice": "William Hill (US)",
+                    "last_update": 1602720144,
+                    "odds": {
+                        "h2h": [
+                            180,
+                            -210
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betonlineag",
+                    "site_nice": "BetOnline.ag",
+                    "last_update": 1602720207,
+                    "odds": {
+                        "h2h": [
+                            180,
+                            -213
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betrivers",
+                    "site_nice": "BetRivers",
+                    "last_update": 1602720086,
+                    "odds": {
+                        "h2h": [
+                            175,
+                            -200
+                        ]
+                    }
+                },
+                {
+                    "site_key": "draftkings",
+                    "site_nice": "DraftKings",
+                    "last_update": 1602720299,
+                    "odds": {
+                        "h2h": [
+                            175,
+                            -200
+                        ]
+                    }
+                },
+                {
+                    "site_key": "intertops",
+                    "site_nice": "Intertops",
+                    "last_update": 1602720166,
+                    "odds": {
+                        "h2h": [
+                            175,
+                            -205
+                        ]
+                    }
+                },
+                {
+                    "site_key": "lowvig",
+                    "site_nice": "LowVig.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            180,
+                            -210
+                        ]
+                    }
+                },
+                {
+                    "site_key": "gtbets",
+                    "site_nice": "GTbets",
+                    "last_update": 1602720249,
+                    "odds": {
+                        "h2h": [
+                            180,
+                            -210
+                        ]
+                    }
+                },
+                {
+                    "site_key": "bookmaker",
+                    "site_nice": "Bookmaker",
+                    "last_update": 1602720226,
+                    "odds": {
+                        "h2h": [
+                            170,
+                            -200
+                        ]
+                    }
+                },
+                {
+                    "site_key": "pointsbetus",
+                    "site_nice": "PointsBet (US)",
+                    "last_update": 1602720143,
+                    "odds": {
+                        "h2h": [
+                            170,
+                            -215
+                        ]
+                    }
+                },
+                {
+                    "site_key": "fanduel",
+                    "site_nice": "FanDuel",
+                    "last_update": 1602720134,
+                    "odds": {
+                        "h2h": [
+                            176,
+                            -210
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betfair",
+                    "site_nice": "Betfair",
+                    "last_update": 1602720275,
+                    "odds": {
+                        "h2h": [
+                            180,
+                            -196
+                        ],
+                        "h2h_lay": [
+                            198,
+                            -179
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betmgm",
+                    "site_nice": "BetMGM",
+                    "last_update": 1602720033,
+                    "odds": {
+                        "h2h": [
+                            170,
+                            -200
+                        ]
+                    }
+                },
+                {
+                    "site_key": "mybookieag",
+                    "site_nice": "MyBookie.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            175,
+                            -205
+                        ]
+                    }
+                }
+            ],
+            "sites_count": 14
+        },
+        {
+            "sport_key": "americanfootball_nfl",
+            "sport_nice": "NFL",
+            "teams": [
+                "Houston Texans",
+                "Tennessee Titans"
+            ],
+            "commence_time": 1603040400,
+            "home_team": "Tennessee Titans",
+            "sites": [
+                {
+                    "site_key": "bookmaker",
+                    "site_nice": "Bookmaker",
+                    "last_update": 1602720226,
+                    "odds": {
+                        "h2h": [
+                            157,
+                            -182
+                        ]
+                    }
+                },
+                {
+                    "site_key": "williamhill_us",
+                    "site_nice": "William Hill (US)",
+                    "last_update": 1602720144,
+                    "odds": {
+                        "h2h": [
+                            170,
+                            -190
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betonlineag",
+                    "site_nice": "BetOnline.ag",
+                    "last_update": 1602720207,
+                    "odds": {
+                        "h2h": [
+                            165,
+                            -192
+                        ]
+                    }
+                },
+                {
+                    "site_key": "fanduel",
+                    "site_nice": "FanDuel",
+                    "last_update": 1602720134,
+                    "odds": {
+                        "h2h": [
+                            162,
+                            -194
+                        ]
+                    }
+                },
+                {
+                    "site_key": "lowvig",
+                    "site_nice": "LowVig.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            165,
+                            -190
+                        ]
+                    }
+                },
+                {
+                    "site_key": "gtbets",
+                    "site_nice": "GTbets",
+                    "last_update": 1602720249,
+                    "odds": {
+                        "h2h": [
+                            170,
+                            -195
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betrivers",
+                    "site_nice": "BetRivers",
+                    "last_update": 1602720086,
+                    "odds": {
+                        "h2h": [
+                            163,
+                            -186
+                        ]
+                    }
+                },
+                {
+                    "site_key": "draftkings",
+                    "site_nice": "DraftKings",
+                    "last_update": 1602720299,
+                    "odds": {
+                        "h2h": [
+                            163,
+                            -186
+                        ]
+                    }
+                },
+                {
+                    "site_key": "unibet",
+                    "site_nice": "Unibet",
+                    "last_update": 1602720112,
+                    "odds": {
+                        "h2h": [
+                            163,
+                            -185
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betmgm",
+                    "site_nice": "BetMGM",
+                    "last_update": 1602720033,
+                    "odds": {
+                        "h2h": [
+                            155,
+                            -182
+                        ]
+                    }
+                },
+                {
+                    "site_key": "pointsbetus",
+                    "site_nice": "PointsBet (US)",
+                    "last_update": 1602720143,
+                    "odds": {
+                        "h2h": [
+                            160,
+                            -190
+                        ]
+                    }
+                },
+                {
+                    "site_key": "mybookieag",
+                    "site_nice": "MyBookie.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            165,
+                            -190
+                        ]
+                    }
+                },
+                {
+                    "site_key": "intertops",
+                    "site_nice": "Intertops",
+                    "last_update": 1602720166,
+                    "odds": {
+                        "h2h": [
+                            160,
+                            -180
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betfair",
+                    "site_nice": "Betfair",
+                    "last_update": 1602720275,
+                    "odds": {
+                        "h2h": [
+                            168,
+                            -182
+                        ],
+                        "h2h_lay": [
+                            182,
+                            -167
+                        ]
+                    }
+                }
+            ],
+            "sites_count": 14
+        },
+        {
+            "sport_key": "americanfootball_nfl",
+            "sport_nice": "NFL",
+            "teams": [
+                "Denver Broncos",
+                "New England Patriots"
+            ],
+            "commence_time": 1603040400,
+            "home_team": "New England Patriots",
+            "sites": [
+                {
+                    "site_key": "bookmaker",
+                    "site_nice": "Bookmaker",
+                    "last_update": 1602720226,
+                    "odds": {
+                        "h2h": [
+                            384,
+                            -500
+                        ]
+                    }
+                },
+                {
+                    "site_key": "fanduel",
+                    "site_nice": "FanDuel",
+                    "last_update": 1602720134,
+                    "odds": {
+                        "h2h": [
+                            320,
+                            -405
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betfair",
+                    "site_nice": "Betfair",
+                    "last_update": 1602720275,
+                    "odds": {
+                        "h2h": [
+                            320,
+                            -385
+                        ],
+                        "h2h_lay": [
+                            390,
+                            -357
+                        ]
+                    }
+                },
+                {
+                    "site_key": "williamhill_us",
+                    "site_nice": "William Hill (US)",
+                    "last_update": 1602720144,
+                    "odds": {
+                        "h2h": [
+                            370,
+                            -450
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betonlineag",
+                    "site_nice": "BetOnline.ag",
+                    "last_update": 1602720207,
+                    "odds": {
+                        "h2h": [
+                            359,
+                            -455
+                        ]
+                    }
+                },
+                {
+                    "site_key": "lowvig",
+                    "site_nice": "LowVig.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            360,
+                            -450
+                        ]
+                    }
+                },
+                {
+                    "site_key": "gtbets",
+                    "site_nice": "GTbets",
+                    "last_update": 1602720249,
+                    "odds": {
+                        "h2h": [
+                            360,
+                            -460
+                        ]
+                    }
+                },
+                {
+                    "site_key": "pointsbetus",
+                    "site_nice": "PointsBet (US)",
+                    "last_update": 1602720143,
+                    "odds": {
+                        "h2h": [
+                            350,
+                            -470
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betrivers",
+                    "site_nice": "BetRivers",
+                    "last_update": 1602720086,
+                    "odds": {
+                        "h2h": [
+                            375,
+                            -455
+                        ]
+                    }
+                },
+                {
+                    "site_key": "unibet",
+                    "site_nice": "Unibet",
+                    "last_update": 1602720112,
+                    "odds": {
+                        "h2h": [
+                            375,
+                            -455
+                        ]
+                    }
+                },
+                {
+                    "site_key": "draftkings",
+                    "site_nice": "DraftKings",
+                    "last_update": 1602720299,
+                    "odds": {
+                        "h2h": [
+                            375,
+                            -455
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betmgm",
+                    "site_nice": "BetMGM",
+                    "last_update": 1602720033,
+                    "odds": {
+                        "h2h": [
+                            350,
+                            -455
+                        ]
+                    }
+                },
+                {
+                    "site_key": "mybookieag",
+                    "site_nice": "MyBookie.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            345,
+                            -430
+                        ]
+                    }
+                }
+            ],
+            "sites_count": 13
+        },
+        {
+            "sport_key": "americanfootball_nfl",
+            "sport_nice": "NFL",
+            "teams": [
+                "Miami Dolphins",
+                "New York Jets"
+            ],
+            "commence_time": 1603051500,
+            "home_team": "Miami Dolphins",
+            "sites": [
+                {
+                    "site_key": "unibet",
+                    "site_nice": "Unibet",
+                    "last_update": 1602720112,
+                    "odds": {
+                        "h2h": [
+                            -370,
+                            310
+                        ]
+                    }
+                },
+                {
+                    "site_key": "bookmaker",
+                    "site_nice": "Bookmaker",
+                    "last_update": 1602720226,
+                    "odds": {
+                        "h2h": [
+                            -420,
+                            330
+                        ]
+                    }
+                },
+                {
+                    "site_key": "draftkings",
+                    "site_nice": "DraftKings",
+                    "last_update": 1602720299,
+                    "odds": {
+                        "h2h": [
+                            -375,
+                            310
+                        ]
+                    }
+                },
+                {
+                    "site_key": "intertops",
+                    "site_nice": "Intertops",
+                    "last_update": 1602720166,
+                    "odds": {
+                        "h2h": [
+                            -420,
+                            330
+                        ]
+                    }
+                },
+                {
+                    "site_key": "pointsbetus",
+                    "site_nice": "PointsBet (US)",
+                    "last_update": 1602720143,
+                    "odds": {
+                        "h2h": [
+                            -410,
+                            310
+                        ]
+                    }
+                },
+                {
+                    "site_key": "williamhill_us",
+                    "site_nice": "William Hill (US)",
+                    "last_update": 1602720144,
+                    "odds": {
+                        "h2h": [
+                            -410,
+                            330
+                        ]
+                    }
+                },
+                {
+                    "site_key": "lowvig",
+                    "site_nice": "LowVig.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            -400,
+                            320
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betonlineag",
+                    "site_nice": "BetOnline.ag",
+                    "last_update": 1602720207,
+                    "odds": {
+                        "h2h": [
+                            -400,
+                            320
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betrivers",
+                    "site_nice": "BetRivers",
+                    "last_update": 1602720086,
+                    "odds": {
+                        "h2h": [
+                            -375,
+                            310
+                        ]
+                    }
+                },
+                {
+                    "site_key": "fanduel",
+                    "site_nice": "FanDuel",
+                    "last_update": 1602720134,
+                    "odds": {
+                        "h2h": [
+                            -420,
+                            330
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betfair",
+                    "site_nice": "Betfair",
+                    "last_update": 1602720275,
+                    "odds": {
+                        "h2h": [
+                            -345,
+                            320
+                        ],
+                        "h2h_lay": [
+                            -333,
+                            350
+                        ]
+                    }
+                },
+                {
+                    "site_key": "gtbets",
+                    "site_nice": "GTbets",
+                    "last_update": 1602720249,
+                    "odds": {
+                        "h2h": [
+                            -420,
+                            320
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betmgm",
+                    "site_nice": "BetMGM",
+                    "last_update": 1602720033,
+                    "odds": {
+                        "h2h": [
+                            -400,
+                            320
+                        ]
+                    }
+                },
+                {
+                    "site_key": "mybookieag",
+                    "site_nice": "MyBookie.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            -400,
+                            325
+                        ]
+                    }
+                }
+            ],
+            "sites_count": 14
         },
         {
             "sport_key": "americanfootball_nfl",
@@ -584,8 +1709,625 @@
             ],
             "commence_time": 1603052700,
             "home_team": "Tampa Bay Buccaneers",
-            "sites": [],
-            "sites_count": 0
+            "sites": [
+                {
+                    "site_key": "unibet",
+                    "site_nice": "Unibet",
+                    "last_update": 1602720112,
+                    "odds": {
+                        "h2h": [
+                            -109,
+                            -103
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betrivers",
+                    "site_nice": "BetRivers",
+                    "last_update": 1602720086,
+                    "odds": {
+                        "h2h": [
+                            -109,
+                            -104
+                        ]
+                    }
+                },
+                {
+                    "site_key": "williamhill_us",
+                    "site_nice": "William Hill (US)",
+                    "last_update": 1602720144,
+                    "odds": {
+                        "h2h": [
+                            -110,
+                            -110
+                        ]
+                    }
+                },
+                {
+                    "site_key": "draftkings",
+                    "site_nice": "DraftKings",
+                    "last_update": 1602720299,
+                    "odds": {
+                        "h2h": [
+                            -109,
+                            -104
+                        ]
+                    }
+                },
+                {
+                    "site_key": "fanduel",
+                    "site_nice": "FanDuel",
+                    "last_update": 1602720134,
+                    "odds": {
+                        "h2h": [
+                            -108,
+                            -108
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betmgm",
+                    "site_nice": "BetMGM",
+                    "last_update": 1602720033,
+                    "odds": {
+                        "h2h": [
+                            -105,
+                            -111
+                        ]
+                    }
+                },
+                {
+                    "site_key": "pointsbetus",
+                    "site_nice": "PointsBet (US)",
+                    "last_update": 1602720143,
+                    "odds": {
+                        "h2h": [
+                            -110,
+                            -110
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betfair",
+                    "site_nice": "Betfair",
+                    "last_update": 1602720275,
+                    "odds": {
+                        "h2h": [
+                            -103,
+                            100
+                        ],
+                        "h2h_lay": [
+                            -101,
+                            104
+                        ]
+                    }
+                },
+                {
+                    "site_key": "gtbets",
+                    "site_nice": "GTbets",
+                    "last_update": 1602720249,
+                    "odds": {
+                        "h2h": [
+                            -110,
+                            -110
+                        ]
+                    }
+                }
+            ],
+            "sites_count": 9
+        },
+        {
+            "sport_key": "americanfootball_nfl",
+            "sport_nice": "NFL",
+            "teams": [
+                "Los Angeles Rams",
+                "San Francisco 49ers"
+            ],
+            "commence_time": 1603066800,
+            "home_team": "San Francisco 49ers",
+            "sites": [
+                {
+                    "site_key": "betonlineag",
+                    "site_nice": "BetOnline.ag",
+                    "last_update": 1602720207,
+                    "odds": {
+                        "h2h": [
+                            -172,
+                            150
+                        ]
+                    }
+                },
+                {
+                    "site_key": "lowvig",
+                    "site_nice": "LowVig.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            -170,
+                            150
+                        ]
+                    }
+                },
+                {
+                    "site_key": "fanduel",
+                    "site_nice": "FanDuel",
+                    "last_update": 1602720134,
+                    "odds": {
+                        "h2h": [
+                            -180,
+                            152
+                        ]
+                    }
+                },
+                {
+                    "site_key": "williamhill_us",
+                    "site_nice": "William Hill (US)",
+                    "last_update": 1602720144,
+                    "odds": {
+                        "h2h": [
+                            -170,
+                            150
+                        ]
+                    }
+                },
+                {
+                    "site_key": "bookmaker",
+                    "site_nice": "Bookmaker",
+                    "last_update": 1602720226,
+                    "odds": {
+                        "h2h": [
+                            -170,
+                            148
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betrivers",
+                    "site_nice": "BetRivers",
+                    "last_update": 1602720086,
+                    "odds": {
+                        "h2h": [
+                            -167,
+                            145
+                        ]
+                    }
+                },
+                {
+                    "site_key": "unibet",
+                    "site_nice": "Unibet",
+                    "last_update": 1602720112,
+                    "odds": {
+                        "h2h": [
+                            -167,
+                            145
+                        ]
+                    }
+                },
+                {
+                    "site_key": "draftkings",
+                    "site_nice": "DraftKings",
+                    "last_update": 1602720299,
+                    "odds": {
+                        "h2h": [
+                            -167,
+                            145
+                        ]
+                    }
+                },
+                {
+                    "site_key": "mybookieag",
+                    "site_nice": "MyBookie.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            -185,
+                            155
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betmgm",
+                    "site_nice": "BetMGM",
+                    "last_update": 1602720033,
+                    "odds": {
+                        "h2h": [
+                            -154,
+                            135
+                        ]
+                    }
+                },
+                {
+                    "site_key": "pointsbetus",
+                    "site_nice": "PointsBet (US)",
+                    "last_update": 1602720143,
+                    "odds": {
+                        "h2h": [
+                            -180,
+                            150
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betfair",
+                    "site_nice": "Betfair",
+                    "last_update": 1602720275,
+                    "odds": {
+                        "h2h": [
+                            -161,
+                            158
+                        ],
+                        "h2h_lay": [
+                            -156,
+                            160
+                        ]
+                    }
+                },
+                {
+                    "site_key": "intertops",
+                    "site_nice": "Intertops",
+                    "last_update": 1602720166,
+                    "odds": {
+                        "h2h": [
+                            -180,
+                            160
+                        ]
+                    }
+                },
+                {
+                    "site_key": "gtbets",
+                    "site_nice": "GTbets",
+                    "last_update": 1602720249,
+                    "odds": {
+                        "h2h": [
+                            -170,
+                            150
+                        ]
+                    }
+                }
+            ],
+            "sites_count": 14
+        },
+        {
+            "sport_key": "americanfootball_nfl",
+            "sport_nice": "NFL",
+            "teams": [
+                "Buffalo Bills",
+                "Kansas City Chiefs"
+            ],
+            "commence_time": 1603141200,
+            "home_team": "Buffalo Bills",
+            "sites": [
+                {
+                    "site_key": "unibet",
+                    "site_nice": "Unibet",
+                    "last_update": 1602720112,
+                    "odds": {
+                        "h2h": [
+                            180,
+                            -204
+                        ]
+                    }
+                },
+                {
+                    "site_key": "bookmaker",
+                    "site_nice": "Bookmaker",
+                    "last_update": 1602720226,
+                    "odds": {
+                        "h2h": [
+                            166,
+                            -195
+                        ]
+                    }
+                },
+                {
+                    "site_key": "draftkings",
+                    "site_nice": "DraftKings",
+                    "last_update": 1602720299,
+                    "odds": {
+                        "h2h": [
+                            180,
+                            -205
+                        ]
+                    }
+                },
+                {
+                    "site_key": "williamhill_us",
+                    "site_nice": "William Hill (US)",
+                    "last_update": 1602720144,
+                    "odds": {
+                        "h2h": [
+                            170,
+                            -190
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betonlineag",
+                    "site_nice": "BetOnline.ag",
+                    "last_update": 1602720207,
+                    "odds": {
+                        "h2h": [
+                            170,
+                            -196
+                        ]
+                    }
+                },
+                {
+                    "site_key": "pointsbetus",
+                    "site_nice": "PointsBet (US)",
+                    "last_update": 1602720143,
+                    "odds": {
+                        "h2h": [
+                            165,
+                            -195
+                        ]
+                    }
+                },
+                {
+                    "site_key": "lowvig",
+                    "site_nice": "LowVig.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            170,
+                            -195
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betrivers",
+                    "site_nice": "BetRivers",
+                    "last_update": 1602720086,
+                    "odds": {
+                        "h2h": [
+                            180,
+                            -205
+                        ]
+                    }
+                },
+                {
+                    "site_key": "gtbets",
+                    "site_nice": "GTbets",
+                    "last_update": 1602720249,
+                    "odds": {
+                        "h2h": [
+                            170,
+                            -200
+                        ]
+                    }
+                },
+                {
+                    "site_key": "fanduel",
+                    "site_nice": "FanDuel",
+                    "last_update": 1602720134,
+                    "odds": {
+                        "h2h": [
+                            168,
+                            -200
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betmgm",
+                    "site_nice": "BetMGM",
+                    "last_update": 1602720033,
+                    "odds": {
+                        "h2h": [
+                            170,
+                            -200
+                        ]
+                    }
+                },
+                {
+                    "site_key": "intertops",
+                    "site_nice": "Intertops",
+                    "last_update": 1602720166,
+                    "odds": {
+                        "h2h": [
+                            165,
+                            -190
+                        ]
+                    }
+                },
+                {
+                    "site_key": "mybookieag",
+                    "site_nice": "MyBookie.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            165,
+                            -190
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betfair",
+                    "site_nice": "Betfair",
+                    "last_update": 1602720275,
+                    "odds": {
+                        "h2h": [
+                            174,
+                            -196
+                        ],
+                        "h2h_lay": [
+                            198,
+                            -172
+                        ]
+                    }
+                }
+            ],
+            "sites_count": 14
+        },
+        {
+            "sport_key": "americanfootball_nfl",
+            "sport_nice": "NFL",
+            "teams": [
+                "Arizona Cardinals",
+                "Dallas Cowboys"
+            ],
+            "commence_time": 1603152900,
+            "home_team": "Dallas Cowboys",
+            "sites": [
+                {
+                    "site_key": "bookmaker",
+                    "site_nice": "Bookmaker",
+                    "last_update": 1602720226,
+                    "odds": {
+                        "h2h": [
+                            -128,
+                            108
+                        ]
+                    }
+                },
+                {
+                    "site_key": "williamhill_us",
+                    "site_nice": "William Hill (US)",
+                    "last_update": 1602720144,
+                    "odds": {
+                        "h2h": [
+                            -125,
+                            105
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betonlineag",
+                    "site_nice": "BetOnline.ag",
+                    "last_update": 1602720207,
+                    "odds": {
+                        "h2h": [
+                            -125,
+                            104
+                        ]
+                    }
+                },
+                {
+                    "site_key": "lowvig",
+                    "site_nice": "LowVig.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            -125,
+                            105
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betrivers",
+                    "site_nice": "BetRivers",
+                    "last_update": 1602720086,
+                    "odds": {
+                        "h2h": [
+                            -127,
+                            112
+                        ]
+                    }
+                },
+                {
+                    "site_key": "unibet",
+                    "site_nice": "Unibet",
+                    "last_update": 1602720112,
+                    "odds": {
+                        "h2h": [
+                            -127,
+                            112
+                        ]
+                    }
+                },
+                {
+                    "site_key": "draftkings",
+                    "site_nice": "DraftKings",
+                    "last_update": 1602720299,
+                    "odds": {
+                        "h2h": [
+                            -127,
+                            112
+                        ]
+                    }
+                },
+                {
+                    "site_key": "mybookieag",
+                    "site_nice": "MyBookie.ag",
+                    "last_update": 1602720201,
+                    "odds": {
+                        "h2h": [
+                            -130,
+                            110
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betmgm",
+                    "site_nice": "BetMGM",
+                    "last_update": 1602720033,
+                    "odds": {
+                        "h2h": [
+                            -128,
+                            110
+                        ]
+                    }
+                },
+                {
+                    "site_key": "fanduel",
+                    "site_nice": "FanDuel",
+                    "last_update": 1602720134,
+                    "odds": {
+                        "h2h": [
+                            -118,
+                            100
+                        ]
+                    }
+                },
+                {
+                    "site_key": "pointsbetus",
+                    "site_nice": "PointsBet (US)",
+                    "last_update": 1602720143,
+                    "odds": {
+                        "h2h": [
+                            -125,
+                            105
+                        ]
+                    }
+                },
+                {
+                    "site_key": "betfair",
+                    "site_nice": "Betfair",
+                    "last_update": 1602720275,
+                    "odds": {
+                        "h2h": [
+                            -116,
+                            110
+                        ],
+                        "h2h_lay": [
+                            -111,
+                            116
+                        ]
+                    }
+                },
+                {
+                    "site_key": "intertops",
+                    "site_nice": "Intertops",
+                    "last_update": 1602720166,
+                    "odds": {
+                        "h2h": [
+                            -130,
+                            110
+                        ]
+                    }
+                },
+                {
+                    "site_key": "gtbets",
+                    "site_nice": "GTbets",
+                    "last_update": 1602720249,
+                    "odds": {
+                        "h2h": [
+                            -125,
+                            105
+                        ]
+                    }
+                }
+            ],
+            "sites_count": 14
         }
     ]
 }

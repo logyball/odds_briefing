@@ -1,11 +1,7 @@
 package main
 
-import (
-	"fmt"
-	"log"
-)
-
 func ErrorHelper(err error) {
-	fmt.Printf("%T\n %s\n %#v\n", err, err, err)
-	log.Fatal(err)
+	InfoLogger.Printf("%T\n %s\n %#v\n", err, err, err)
+	WarningLogger.Printf("%T\n %s\n %#v\n", err, err, err)
+	ErrorLogger.Fatal(err)
 }

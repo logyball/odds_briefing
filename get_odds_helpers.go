@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"log"
 	"math"
 	"net/http"
 	"strconv"
@@ -48,7 +47,7 @@ func makeApiRequest(endpoint string) []byte {
 		ErrorHelper(err)
 	}
 	if resp.StatusCode != 200 {
-		log.Fatalf("non 200 error code for: %s", finalUrl)
+		ErrorLogger.Fatalf("non 200 error code for: %s", finalUrl)
 		ErrorHelper(err)
 	}
 	body, err := ioutil.ReadAll(resp.Body)
@@ -111,6 +110,8 @@ func processNflTotalsResponse(jsonResponseBody []byte) TotalsOddsResponse {
 	}
 
 	convertTotalsPointsToStringAndFloat(&decodedNflTotalsResp)
+
+	InfoLogger.Printf("NFL Totals API Response: %v\n", decodedNflTotalsResp)
 
 	return decodedNflTotalsResp
 }

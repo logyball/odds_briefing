@@ -1,8 +1,8 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
-	"log"
 	"os"
 	"path/filepath"
 	"testing"
@@ -13,7 +13,7 @@ import (
 func getJsonFilepath(filename string) string {
 	curDir, err := os.Getwd()
 	if err != nil {
-		log.Fatal(err)
+		ErrorHelper(err)
 	}
 	return filepath.Join(curDir, "example_responses", filename)
 }
@@ -44,7 +44,8 @@ func TestProcessActiveSportsResponse(t *testing.T) {
 	activeSportsJsonFilepath := getJsonFilepath("active_sports.json")
 	activeSportsByteArr, err := ioutil.ReadFile(activeSportsJsonFilepath)
 	if err != nil {
-		log.Fatal(err)
+		fmt.Printf("failed reading file: %s\n", err.Error())
+		t.FailNow()
 	}
 	activeSportsResp := processActiveSportsResponse(activeSportsByteArr)
 	assert.NotNil(t, activeSportsResp, "active sports resp is nil")
@@ -57,7 +58,8 @@ func TestGetListOfSportsFromActiveResp(t *testing.T) {
 	activeSportsJsonFilepath := getJsonFilepath("active_sports.json")
 	activeSportsByteArr, err := ioutil.ReadFile(activeSportsJsonFilepath)
 	if err != nil {
-		log.Fatal(err)
+		fmt.Printf("failed reading file: %s\n", err.Error())
+		t.FailNow()
 	}
 	activeSportsResp := processActiveSportsResponse(activeSportsByteArr)
 	listOfSports := getListOfSportsFromActiveResp(&activeSportsResp)
@@ -76,7 +78,8 @@ func TestProcessNFLTotalsResponse(t *testing.T) {
 	nflTotalsJsonFilepath := getJsonFilepath("totals_nfl.json")
 	nflTotalsByteArr, err := ioutil.ReadFile(nflTotalsJsonFilepath)
 	if err != nil {
-		log.Fatal(err)
+		fmt.Printf("failed reading file: %s\n", err.Error())
+		t.FailNow()
 	}
 	nflTotalsResp := processNflTotalsResponse(nflTotalsByteArr)
 	assert.NotNil(t, nflTotalsResp, "nfl totals  resp is nil")
@@ -112,7 +115,8 @@ func TestFormattingProcessedNflTotalsResp(t *testing.T) {
 	nflTotalsJsonFilepath := getJsonFilepath("totals_nfl.json")
 	nflTotalsByteArr, err := ioutil.ReadFile(nflTotalsJsonFilepath)
 	if err != nil {
-		log.Fatal(err)
+		fmt.Printf("failed reading file: %s\n", err.Error())
+		t.FailNow()
 	}
 	nflTotalsResp := processNflTotalsResponse(nflTotalsByteArr)
 	totalOdds := formatNflTotalsResp(nflTotalsResp)

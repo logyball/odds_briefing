@@ -33,11 +33,11 @@ func (c *credentials) loadCredentials() *credentials {
 
 	yamlFile, err := ioutil.ReadFile(credentialsFileName)
 	if err != nil {
-		log.Printf("yamlFile.Get err   #%v ", err)
+		ErrorLogger.Printf("yamlFile.Get err   #%v ", err)
 	}
 	err = yaml.Unmarshal(yamlFile, c)
 	if err != nil {
-		log.Fatalf("Unmarshal: %v", err)
+		ErrorLogger.Fatalf("Unmarshal: %v", err)
 	}
 
 	return c

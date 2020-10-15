@@ -3,6 +3,8 @@
 //
 // Only run these tests sometimes to not destroy rate limited APIs
 //
+// Set the TEST_HARMFUL_STUFF environment variable to "true" if you want to test really dangerous stuff
+//
 package main
 
 import (
@@ -36,7 +38,7 @@ func TestGetNflTotalsOdds(t *testing.T) {
 }
 
 ////// Twilio API - pay as you go
-func TestSendTwilioMsgFromData(t *testing.T) {
+func TestTwilioApiWrapper(t *testing.T) {
 	err := sendTwilioMsgFromGeneratedOddsData("gambling data!")
 	assert.Nil(t, err, "error when sending message")
 }
