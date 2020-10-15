@@ -25,6 +25,9 @@ func getCredsFilePath() string {
 	if err != nil {
 		log.Fatal(err)
 	}
+	if os.Getenv("CI") == "true" {
+		return filepath.Join(curDir, credsFileName+".example")
+	}
 	return filepath.Join(curDir, credsFileName)
 }
 
