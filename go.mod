@@ -1,4 +1,4 @@
-module odds_briefing
+module github.com/loganballard/odds_briefing
 
 go 1.14
 

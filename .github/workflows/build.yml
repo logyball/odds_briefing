@@ -22,8 +22,50 @@ jobs:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
 
+    - name: format code
+      run: go fmt .
+
+    - name: vet code
+      run: go vet .
+
+    # Commenting out for now, holy moly
+    # - name: lint code
+    #   run: |
+    #     go get -u golang.org/x/lint/golint
+    #     golint ./...
+
     - name: Build
       run: go build -v .
-      
+
+  test:
+    name: Test
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Set up Go 1.x
+      uses: actions/setup-go@v2
+      with:
+        go-version: ^1.13
+      id: go
+
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v2
+    
     - name: Test
+      env:
+        CI_ODDS_KEY: ${{ secrets.ODDS_API_KEY }}
+        CI_TWILIO_AUTH_KEY: ${{ secrets.TWILIO_AUTH }}
+        CI_TWILIO_SID: ${{ secrets.TWILIO_SID }}
+        CI_TWILIO_NUMBER_TO: ${{ secrets.TWILIO_NUMBER_TO }}
+        CI_TWILIO_NUMBER_FROM: ${{ secrets.TWILIO_NUMBER_FROM }}
       run: go test -v .
+
+    - name: Test Apis Are Up
+      env:
+        CI_ODDS_KEY: ${{ secrets.ODDS_API_KEY }}
+        CI_TWILIO_AUTH_KEY: ${{ secrets.TWILIO_AUTH }}
+        CI_TWILIO_SID: ${{ secrets.TWILIO_SID }}
+        CI_TWILIO_NUMBER_TO: ${{ secrets.TWILIO_NUMBER_TO }}
+        CI_TWILIO_NUMBER_FROM: ${{ secrets.TWILIO_NUMBER_FROM }}
+      run: go test -v . -tags=api_tests

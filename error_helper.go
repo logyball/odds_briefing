@@ -1,7 +1,11 @@
 package main
 
+import (
+	"fmt"
+
+	logger "github.com/loganballard/odds_briefing/logger"
+)
+
 func ErrorHelper(err error) {
-	InfoLogger.Printf("%T\n %s\n %#v\n", err, err, err)
-	WarningLogger.Printf("%T\n %s\n %#v\n", err, err, err)
-	ErrorLogger.Fatal(err)
+	logger.Error(fmt.Sprintf("%T\n %s\n %#v\n", err, err, err))
 }

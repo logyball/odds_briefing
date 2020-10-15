@@ -14,6 +14,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+const HARMFUL_TEST_ENV_VAR string = "TWILIO_TESTS"
+
 ////// Odds API - Free but limited to 500 req/mo
 func TestMakeApiRequestCanReachBaseUrl(t *testing.T) {
 	body := makeApiRequest("")
@@ -39,17 +41,23 @@ func TestGetNflTotalsOdds(t *testing.T) {
 
 ////// Twilio API - pay as you go
 func TestTwilioApiWrapper(t *testing.T) {
-	err := sendTwilioMsgFromGeneratedOddsData("gambling data!")
-	assert.Nil(t, err, "error when sending message")
+	if os.Getenv(HARMFUL_TEST_ENV_VAR) == "true" {
+		err := sendTwilioMsgFromGeneratedOddsData("gambling data!")
+		assert.Nil(t, err, "error when sending message")
+	}
+	t.Skip()
 }
 
 func TestSendingFirstTotalsOddsAsMessage(t *testing.T) {
-	err := SendFirstTotalsOddsAsMessage()
-	assert.Nil(t, err, "error when sending message")
+	if os.Getenv(HARMFUL_TEST_ENV_VAR) == "true" {
+		err := SendFirstTotalsOddsAsMessage()
+		assert.Nil(t, err, "error when sending message")
+	}
+	t.Skip()
 }
 
 func TestSendingFirstFiveTotalsOddsAsMessage(t *testing.T) {
-	if os.Getenv("TEST_HARMFUL_STUFF") == "true" {
+	if os.Getenv(HARMFUL_TEST_ENV_VAR) == "true" {
 		err := SendFirstXTotalsOddsAsMessage(5)
 		assert.Nil(t, err, "error when sending message")
 	}

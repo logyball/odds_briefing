@@ -1,4 +1,4 @@
-package main
+package config
 
 import (
 	"os"
@@ -20,13 +20,13 @@ func TestCredentialsFileExists(t *testing.T) {
 }
 
 func TestCredentialsFileLoadingNoErrors(t *testing.T) {
-	var credFile credentials
-	credFile.loadCredentials()
+	var credFile Credentials
+	credFile.LoadCredentials()
 }
 
 func TestCredentialsFileHasAllNecessaryApiKeys(t *testing.T) {
-	var credFile credentials
-	credFile.loadCredentials()
+	var credFile Credentials
+	credFile.LoadCredentials()
 	assert.NotEmpty(t, credFile.OddsApiKey, "missing odds api key")
 	assert.NotEmpty(t, credFile.TwilioSid, "missing twilio sid")
 	assert.NotEmpty(t, credFile.TwilioAuthKey, "missing twilio auth key")
