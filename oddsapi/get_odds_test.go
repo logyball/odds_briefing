@@ -1,4 +1,4 @@
-package main
+package oddsapi
 
 import (
 	"fmt"
@@ -7,13 +7,14 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/loganballard/odds_briefing/logger"
 	"github.com/stretchr/testify/assert"
 )
 
-func getJsonFilepath(filename string) string {
+func getJSONFilepath(filename string) string {
 	curDir, err := os.Getwd()
 	if err != nil {
-		ErrorHelper(err)
+		logger.ErrorHelper(err)
 	}
 	return filepath.Join(curDir, "example_responses", filename)
 }
@@ -22,7 +23,7 @@ func getJsonFilepath(filename string) string {
 	Helper functions
 */
 func TestGetOddsApiKey(t *testing.T) {
-	apiKey := getOddsApiKey()
+	apiKey := getOddsAPIKey()
 	assert.NotEmpty(t, apiKey, "odds api key not found")
 }
 
@@ -41,8 +42,8 @@ func TestH2hToAmericanOdds(t *testing.T) {
 */
 
 func TestProcessActiveSportsResponse(t *testing.T) {
-	activeSportsJsonFilepath := getJsonFilepath("active_sports.json")
-	activeSportsByteArr, err := ioutil.ReadFile(activeSportsJsonFilepath)
+	activeSportsJSONFilepath := getJSONFilepath("active_sports.json")
+	activeSportsByteArr, err := ioutil.ReadFile(activeSportsJSONFilepath)
 	if err != nil {
 		fmt.Printf("failed reading file: %s\n", err.Error())
 		t.FailNow()
@@ -55,8 +56,8 @@ func TestProcessActiveSportsResponse(t *testing.T) {
 }
 
 func TestGetListOfSportsFromActiveResp(t *testing.T) {
-	activeSportsJsonFilepath := getJsonFilepath("active_sports.json")
-	activeSportsByteArr, err := ioutil.ReadFile(activeSportsJsonFilepath)
+	activeSportsJSONFilepath := getJSONFilepath("active_sports.json")
+	activeSportsByteArr, err := ioutil.ReadFile(activeSportsJSONFilepath)
 	if err != nil {
 		fmt.Printf("failed reading file: %s\n", err.Error())
 		t.FailNow()
@@ -75,15 +76,15 @@ func TestGetListOfSportsFromActiveResp(t *testing.T) {
 */
 
 func TestProcessNFLTotalsResponse(t *testing.T) {
-	nflTotalsJsonFilepath := getJsonFilepath("totals_nfl.json")
-	nflTotalsByteArr, err := ioutil.ReadFile(nflTotalsJsonFilepath)
+	nflTotalsJSONFilepath := getJSONFilepath("totals_nfl.json")
+	nflTotalsByteArr, err := ioutil.ReadFile(nflTotalsJSONFilepath)
 	if err != nil {
 		fmt.Printf("failed reading file: %s\n", err.Error())
 		t.FailNow()
 	}
 	nflTotalsResp := processNflTotalsResponse(nflTotalsByteArr)
 	assert.NotNil(t, nflTotalsResp, "nfl totals  resp is nil")
-	assert.IsType(t, TotalsOddsResponse{}, nflTotalsResp, "active sports resp is wrong type")
+	assert.IsType(t, totalsOddsResponse{}, nflTotalsResp, "active sports resp is wrong type")
 	assert.NotEmpty(t, nflTotalsResp.Games)
 	assert.True(t, nflTotalsResp.Success)
 	for _, entry := range nflTotalsResp.Games {
@@ -112,8 +113,8 @@ func TestProcessNFLTotalsResponse(t *testing.T) {
 }
 
 func TestFormattingProcessedNflTotalsResp(t *testing.T) {
-	nflTotalsJsonFilepath := getJsonFilepath("totals_nfl.json")
-	nflTotalsByteArr, err := ioutil.ReadFile(nflTotalsJsonFilepath)
+	nflTotalsJSONFilepath := getJSONFilepath("totals_nfl.json")
+	nflTotalsByteArr, err := ioutil.ReadFile(nflTotalsJSONFilepath)
 	if err != nil {
 		fmt.Printf("failed reading file: %s\n", err.Error())
 		t.FailNow()

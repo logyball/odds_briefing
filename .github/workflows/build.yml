@@ -23,16 +23,15 @@ jobs:
       uses: actions/checkout@v2
 
     - name: format code
-      run: go fmt .
+      run: go fmt ./...
 
     - name: vet code
       run: go vet .
 
-    # Commenting out for now, holy moly
-    # - name: lint code
-    #   run: |
-    #     go get -u golang.org/x/lint/golint
-    #     golint ./...
+    - name: lint code
+      run: |
+        go get -u golang.org/x/lint/golint
+        golint ./...
 
     - name: Build
       run: go build -v .
@@ -59,13 +58,14 @@ jobs:
         CI_TWILIO_SID: ${{ secrets.TWILIO_SID }}
         CI_TWILIO_NUMBER_TO: ${{ secrets.TWILIO_NUMBER_TO }}
         CI_TWILIO_NUMBER_FROM: ${{ secrets.TWILIO_NUMBER_FROM }}
-      run: go test -v .
+      run: go test -v ./...
 
     - name: Test Apis Are Up
+      if: github.ref == 'refs/heads/master' && github.event_name == 'push'  # only tests on merge to master
       env:
         CI_ODDS_KEY: ${{ secrets.ODDS_API_KEY }}
         CI_TWILIO_AUTH_KEY: ${{ secrets.TWILIO_AUTH }}
         CI_TWILIO_SID: ${{ secrets.TWILIO_SID }}
         CI_TWILIO_NUMBER_TO: ${{ secrets.TWILIO_NUMBER_TO }}
         CI_TWILIO_NUMBER_FROM: ${{ secrets.TWILIO_NUMBER_FROM }}
-      run: go test -v . -tags=api_tests
+      run: go test -v ./... -tags=api_tests
