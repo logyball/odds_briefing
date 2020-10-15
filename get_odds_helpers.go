@@ -11,6 +11,7 @@ import (
 	"time"
 
 	config "github.com/loganballard/odds_briefing/config"
+	logger "github.com/loganballard/odds_briefing/logger"
 )
 
 const baseApiUrl string = "https://api.the-odds-api.com"
@@ -49,7 +50,7 @@ func makeApiRequest(endpoint string) []byte {
 		ErrorHelper(err)
 	}
 	if resp.StatusCode != 200 {
-		ErrorLogger.Fatalf("non 200 error code for: %s", finalUrl)
+		logger.Warn(fmt.Sprintf("non 200 error code for: %s", finalUrl))
 		ErrorHelper(err)
 	}
 	body, err := ioutil.ReadAll(resp.Body)
@@ -113,7 +114,7 @@ func processNflTotalsResponse(jsonResponseBody []byte) TotalsOddsResponse {
 
 	convertTotalsPointsToStringAndFloat(&decodedNflTotalsResp)
 
-	InfoLogger.Printf("NFL Totals API Response: %v\n", decodedNflTotalsResp)
+	logger.Info(fmt.Sprintf("NFL Totals API Response: %v\n", decodedNflTotalsResp))
 
 	return decodedNflTotalsResp
 }

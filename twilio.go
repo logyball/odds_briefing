@@ -2,12 +2,14 @@ package main
 
 import (
 	"errors"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"strings"
 
 	config "github.com/loganballard/odds_briefing/config"
+	logger "github.com/loganballard/odds_briefing/logger"
 )
 
 func getTwilioInfo() (string, string, string, string) {
@@ -54,7 +56,7 @@ func sendTwilioMsgFromGeneratedOddsData(gamblingMsg string) error {
 	msgReq := buildTwilioRequest(gamblingMsg)
 	client := &http.Client{}
 
-	InfoLogger.Printf("Sending Request to Twilio API: %v\n", msgReq)
+	logger.Info(fmt.Sprintf("Sending Request to Twilio API: %v\n", msgReq))
 	resp, err := client.Do(&msgReq)
 	if err != nil {
 		ErrorHelper(err)
@@ -63,7 +65,7 @@ func sendTwilioMsgFromGeneratedOddsData(gamblingMsg string) error {
 	if err != nil {
 		ErrorHelper(err)
 	}
-	InfoLogger.Printf("Twilio API Response: %v", string(respBody))
+	logger.Info(fmt.Sprintf("Twilio API Response: %v", string(respBody)))
 	return nil
 }
 
