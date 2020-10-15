@@ -1,4 +1,4 @@
-package oddsApi
+package oddsapi
 
 import "time"
 

@@ -10,7 +10,7 @@ import (
 
 	"github.com/loganballard/odds_briefing/config"
 	logger "github.com/loganballard/odds_briefing/logger"
-	odds "github.com/loganballard/odds_briefing/oddsApi"
+	odds "github.com/loganballard/odds_briefing/oddsapi"
 )
 
 func getTwilioInfo() (string, string, string, string) {

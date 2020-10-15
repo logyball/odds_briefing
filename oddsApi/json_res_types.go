@@ -1,4 +1,4 @@
-package oddsApi
+package oddsapi
 
 // ActiveSportsResponse is an array of sports that are currently gamble-able
 type ActiveSportsResponse struct {
