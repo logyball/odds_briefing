@@ -6,11 +6,13 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
+
+	config "github.com/loganballard/odds_briefing/config"
 )
 
 func getTwilioInfo() (string, string, string, string) {
-	var c credentials
-	c.loadCredentials()
+	var c config.Credentials
+	c.LoadCredentials()
 	return c.TwilioSid, c.TwilioAuthKey, c.TwilioNumberFrom, c.TwilioNumberTo
 }
 

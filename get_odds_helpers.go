@@ -9,6 +9,8 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	config "github.com/loganballard/odds_briefing/config"
 )
 
 const baseApiUrl string = "https://api.the-odds-api.com"
@@ -17,8 +19,8 @@ const region string = "us" // only bet on USA!
 // SHARED FUNCTIONS
 
 func getOddsApiKey() string {
-	var credFile credentials
-	credFile.loadCredentials()
+	var credFile config.Credentials
+	credFile.LoadCredentials()
 	return credFile.OddsApiKey
 }
 
